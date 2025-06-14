@@ -18,7 +18,7 @@ svg {
 
 #gh-dark-mode-only:target #background {
   fill: none;
-  stroke: rgb(225, 228, 232);
+  stroke: none;
   stroke-width: 0.5px;
 }
 
@@ -130,7 +130,7 @@ div.ellipsis {
 
 <div>
 <span class="progress">
-<span style="background-color: #f1e05a; width: 41.15437140531029%;" class="progress-item"></span><span style="background-color: #e34c26; width: 32.67641883551751%;" class="progress-item"></span><span style="background-color: #663399; width: 26.1692097591722%;" class="progress-item"></span>
+<span style="background-color: #f1e05a; width: 41.153289579082006%;" class="progress-item"></span><span style="background-color: #e34c26; width: 32.67701956335043%;" class="progress-item"></span><span style="background-color: #663399; width: 26.169690857567566%;" class="progress-item"></span>
 </span>
 </div>
 
