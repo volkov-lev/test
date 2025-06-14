@@ -366,6 +366,8 @@ svg {
 `;
 }
 
+async function main() {
+  try {
     const data = await fetchFromGitHub(query);
     const user = data.user;
 
@@ -400,7 +402,7 @@ svg {
     const svg = generateSVG(stats);
 
     // Создание папки svg, если она не существует
-    const svgDir = path.resolve(__dirname, "..", "svg"); // Путь к папке svg в корне проекта
+    const svgDir = path.resolve(__dirname, "..", "svg");
     if (!fs.existsSync(svgDir)) {
       fs.mkdirSync(svgDir, { recursive: true });
     }
