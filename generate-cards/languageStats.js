@@ -30,7 +30,7 @@ const colors = {
     title: "#006AFF",
     lang: "#c9d1d9",
     percent: "#8b949e",
-    outline: "rgb(225, 228, 232)",
+    outline: "none",
     progressBackground: "rgba(110, 118, 129, 0.4)",
     progressItemOutline: "#393f47",
   },
