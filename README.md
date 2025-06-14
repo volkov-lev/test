@@ -1,3 +1,6 @@
+<!-- Statistics: General statistics -->
+<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/github_stats.svg#gh-dark-mode-only"/>
+<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/github_stats.svg#gh-light-mode-only"/>
 
 # GitHub Stats Cards
 
