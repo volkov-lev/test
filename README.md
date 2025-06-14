@@ -62,26 +62,27 @@ Generate SVG cards with GitHub statistics (commits, stars, unique visitors, and 
 6. **Add the statistics to your GitHub profile README:**
    - Copy and paste the following code blocks into your markdown content.
    - Change the `username` value to your GitHub username.
+   - Change the `repository_name` value to your GitHub user repository name.
 
  ```md
  <!-- Statistics: Commit series -->
- <img src="https://raw.githubusercontent.com/username/github-stats-svg/main/svg/streak_stats.svg#gh-dark-mode-only"/>
- <img src="https://raw.githubusercontent.com/username/github-stats-svg/main/svg/streak_stats.svg#gh-light-mode-only"/>
+ <img src="https://raw.githubusercontent.com/username/repository_name/main/svg/streak_stats.svg#gh-dark-mode-only"/>
+ <img src="https://raw.githubusercontent.com/username/repository_name/main/svg/streak_stats.svg#gh-light-mode-only"/>
  ```
  ```md
  <!-- Statistics: Unique repository visitors -->
- <img src="https://raw.githubusercontent.com/username/github-stats-svg/main/svg/traffic_stats.svg#gh-dark-mode-only"/>
- <img src="https://raw.githubusercontent.com/username/github-stats-svg/main/svg/traffic_stats.svg#gh-light-mode-only"/>
+ <img src="https://raw.githubusercontent.com/username/repository_name/main/svg/traffic_stats.svg#gh-dark-mode-only"/>
+ <img src="https://raw.githubusercontent.com/username/repository_name/main/svg/traffic_stats.svg#gh-light-mode-only"/>
  ```
  ```md
  <!-- Statistics: General statistics -->
- <img src="https://raw.githubusercontent.com/username/github-stats-svg/main/svg/github_stats.svg#gh-dark-mode-only"/>
- <img src="https://raw.githubusercontent.com/username/github-stats-svg/main/svg/github_stats.svg#gh-light-mode-only"/>
+ <img src="https://raw.githubusercontent.com/username/repository_name/main/svg/github_stats.svg#gh-dark-mode-only"/>
+ <img src="https://raw.githubusercontent.com/username/repository_name/main/svg/github_stats.svg#gh-light-mode-only"/>
  ```
  ```md
  <!-- Statistics: Programming languages -->
- <img src="https://raw.githubusercontent.com/username/github-stats-svg/main/svg/language_stats.svg#gh-dark-mode-only"/>
- <img src="https://raw.githubusercontent.com/username/github-stats-svg/main/svg/language_stats.svg#gh-light-mode-only"/>
+ <img src="https://raw.githubusercontent.com/username/repository_name/main/svg/language_stats.svg#gh-dark-mode-only"/>
+ <img src="https://raw.githubusercontent.com/username/grepository_name/main/svg/language_stats.svg#gh-light-mode-only"/>
  ```
 
 <br>
