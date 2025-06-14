@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const fetch = require("node-fetch"); // Важно: node-fetch нужен для fetch в Node.js
+const fetch = require("node-fetch"); // Для Node.js 18+ можно убрать и использовать глобальный fetch
 
 const username = process.env.GITHUB_ACTOR;
 const token = process.env.ACCESS_TOKEN;
@@ -136,7 +136,6 @@ async function fetchFromGitHub(query, variables = {}) {
   return data.data;
 }
 
-// Функция для генерации SVG на основе статистики
 function generateSVG(stats) {
   return `
 <svg id="gh-dark-mode-only" width="360" height="210" viewBox="0 0 360 210" preserveAspectRatio="xMinYMin meet" xmlns="http://www.w3.org/2000/svg">
@@ -144,7 +143,6 @@ function generateSVG(stats) {
 svg {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
 }
-
 #background {
   width: calc(100% - 10px);
   height: calc(100% - 10px);
@@ -154,12 +152,10 @@ svg {
   rx: 6px;
   ry: 6px;
 }
-
 #gh-dark-mode-only:target #background {
   fill: ${colors.dark.background};
   stroke: ${colors.dark.stroke};
 }
-
 .container {
   width: 100%;
   height: 100%;
@@ -168,7 +164,6 @@ svg {
   padding: 16px;
   box-sizing: border-box;
 }
-
 .header {
   font-size: 16px;
   font-weight: 600;
@@ -176,18 +171,15 @@ svg {
   margin-bottom: 12px;
   white-space: nowrap;
 }
-
 #gh-dark-mode-only:target .header {
   color: ${colors.dark.title};
 }
-
 .stats-container {
   display: flex;
   flex-direction: column;
   gap: 8px;
   flex-grow: 1;
 }
-
 .stat-row {
   display: flex;
   justify-content: space-between;
@@ -195,49 +187,38 @@ svg {
   font-size: 12px;
   color: ${colors.light.textPrimary};
 }
-
 #gh-dark-mode-only:target .stat-row {
   color: ${colors.dark.textPrimary};
 }
-
 .stat-label {
   display: flex;
   align-items: center;
   gap: 6px;
   white-space: nowrap;
 }
-
 .stat-value {
   white-space: nowrap;
   margin-left: 8px;
 }
-
 .octicon {
   fill: ${colors.light.icon};
   flex-shrink: 0;
 }
-
 #gh-dark-mode-only:target .octicon {
   fill: ${colors.dark.icon};
 }
-
-/* Адаптация размера текста */
 @media screen and (max-width: 400px) {
   .header {
     font-size: calc(14px + 0.5vw);
   }
-  
   .stat-row {
     font-size: calc(10px + 0.5vw);
   }
-  
   .octicon {
     width: calc(12px + 0.5vw);
     height: calc(12px + 0.5vw);
   }
 }
-
-/* Анимации */
 @keyframes slideIn {
   from {
     transform: translateX(-100%);
@@ -248,7 +229,6 @@ svg {
     opacity: 1;
   }
 }
-
 .stat-row {
   animation: slideIn 0.5s ease-out forwards;
   animation-delay: calc(var(--row-index) * 0.1s);
@@ -270,7 +250,6 @@ svg {
           </span>
           <span class="stat-value">${stats.stars}</span>
         </div>
-
         <div class="stat-row" style="--row-index: 1">
           <span class="stat-label">
             <svg class="octicon" viewBox="0 0 16 16" width="16" height="16">
@@ -280,7 +259,6 @@ svg {
           </span>
           <span class="stat-value">${stats.forks}</span>
         </div>
-
         <div class="stat-row" style="--row-index: 2">
           <span class="stat-label">
             <svg class="octicon" viewBox="0 0 16 16" width="16" height="16">
@@ -290,7 +268,6 @@ svg {
           </span>
           <span class="stat-value">${stats.contributions}</span>
         </div>
-
         <div class="stat-row" style="--row-index: 3">
           <span class="stat-label">
             <svg class="octicon" viewBox="0 0 16 16" width="16" height="16">
@@ -300,7 +277,6 @@ svg {
           </span>
           <span class="stat-value">${stats.linesChanged}</span>
         </div>
-
         <div class="stat-row" style="--row-index: 4">
           <span class="stat-label">
             <svg class="octicon" viewBox="0 0 16 16" width="16" height="16">
@@ -310,7 +286,6 @@ svg {
           </span>
           <span class="stat-value">${stats.views}</span>
         </div>
-
         <div class="stat-row" style="--row-index: 5">
           <span class="stat-label">
             <svg class="octicon" viewBox="0 0 16 16" width="16" height="16">
@@ -327,7 +302,29 @@ svg {
 </svg>
 `;
 }
-    
+
+// ВЕСЬ асинхронный код только тут!
+async function main() {
+  try {
+    // Готовый GraphQL-запрос
+    const query = `
+      query {
+        user(login: "${username}") {
+          name
+          repositories(first: 100, ownerAffiliations: OWNER, isFork: false) {
+            totalCount
+            nodes {
+              nameWithOwner
+              stargazers { totalCount }
+              forkCount
+            }
+          }
+          contributionsCollection {
+            totalCommitContributions
+          }
+        }
+      }
+    `;
     const data = await fetchFromGitHub(query);
     const user = data.user;
     const repos = user.repositories.nodes.map((repo) => repo.nameWithOwner);
