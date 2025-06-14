@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const fetch = require("node-fetch"); // Важно: node-fetch нужен для fetch в Node.js
 
 const username = process.env.GITHUB_ACTOR;
 const token = process.env.ACCESS_TOKEN;
@@ -12,14 +13,13 @@ if (!token) {
 const GRAPHQL_API = "https://api.github.com/graphql";
 const REST_API = "https://api.github.com";
 
-// Colors for light and dark themes (Цвета для светлой и темной темы)
 const colors = {
   light: {
-    background: "none", // Background color (Цвет фона)
-    stroke: "rgb(225, 228, 232)", // Outline color (Цвет обводки)
-    title: "rgb(0, 106, 255)", // Header color (Цвет заголовка)
-    textPrimary: "rgb(88, 96, 105)", // Main text color (Цвет основного текста
-    icon: "rgb(88, 96, 105)", // Color of icons (Цвет иконок)
+    background: "none",
+    stroke: "rgb(225, 228, 232)",
+    title: "rgb(0, 106, 255)",
+    textPrimary: "rgb(88, 96, 105)",
+    icon: "rgb(88, 96, 105)",
   },
   dark: {
     background: "none",
@@ -70,51 +70,25 @@ class UserStats {
     if (this._linesChanged !== null) {
       return this._linesChanged;
     }
-
     let additions = 0;
     let deletions = 0;
-
     for (const repo of await this.repos) {
       try {
-        const r = await this.queries.queryRest(
-          `/repos/${repo}/stats/contributors`
-        );
-
-        // console.log(`Данные для репозитория ${repo}:`, r);
-
-        if (!Array.isArray(r)) {
-          //   console.warn(`Пропускаем репозиторий ${repo}: Ответ не является массивом.`);
-          continue;
-        }
-
+        const r = await this.queries.queryRest(`/repos/${repo}/stats/contributors`);
+        if (!Array.isArray(r)) continue;
         for (const authorObj of r) {
-          if (
-            typeof authorObj !== "object" ||
-            !authorObj.author ||
-            typeof authorObj.author !== "object"
-          ) {
-            // console.warn(`Пропускаем некорректный объект автора в репозитории ${repo}.`);
-            continue;
-          }
-
+          if (typeof authorObj !== "object" || !authorObj.author || typeof authorObj.author !== "object") continue;
           const author = authorObj.author.login || "";
-          if (author !== this.username) {
-            // console.log(`Пропускаем автора ${author}, это не ${this.username}`);
-            continue;
-          }
-
-          //   console.log(`Обрабатываем данные для автора ${author}`);
-
+          if (author !== this.username) continue;
           for (const week of authorObj.weeks || []) {
             additions += week.a || 0;
             deletions += week.d || 0;
           }
         }
       } catch (error) {
-        // console.error(`Ошибка получения статистики для репозитория ${repo}:`,error.message);
+        // Пропуск ошибок отдельных репозиториев
       }
     }
-
     this._linesChanged = additions + deletions;
     return this._linesChanged;
   }
@@ -123,33 +97,23 @@ class UserStats {
     if (this._views !== null) {
       return this._views;
     }
-
     let total = 0;
-
     for (const repo of await this.repos) {
       try {
         const r = await this.queries.queryRest(`/repos/${repo}/traffic/views`);
-        // console.log(`Данные о просмотрах для репозитория ${repo}:`, r);
-
-        if (!r.views || !Array.isArray(r.views)) {
-          //   console.warn(`Пропускаем репозиторий ${repo}: Некорректные данные о просмотрах.`);
-          continue;
-        }
-
+        if (!r.views || !Array.isArray(r.views)) continue;
         for (const view of r.views) {
           total += view.count || 0;
         }
       } catch (error) {
-        // console.error(`Ошибка получения просмотров для репозитория ${repo}:`,error.message);
+        // Пропуск ошибок отдельных репозиториев
       }
     }
-
     this._views = total;
     return total;
   }
 }
 
-// Функция для выполнения запросов к GitHub GraphQL API
 async function fetchFromGitHub(query, variables = {}) {
   const response = await fetch(GRAPHQL_API, {
     method: "POST",
@@ -162,13 +126,11 @@ async function fetchFromGitHub(query, variables = {}) {
 
   if (!response.ok) {
     const errorText = await response.text();
-    //console.error("Ошибка GitHub API:", errorText);
     throw new Error("Не удалось получить данные из GitHub API.");
   }
 
   const data = await response.json();
   if (data.errors) {
-    //console.error("Ошибка GitHub API:", JSON.stringify(data.errors, null, 2));
     throw new Error("Не удалось получить данные из GitHub API.");
   }
   return data.data;
@@ -365,23 +327,17 @@ svg {
 </svg>
 `;
 }
-
-async function main() {
-  try {
+    
     const data = await fetchFromGitHub(query);
     const user = data.user;
-
     const repos = user.repositories.nodes.map((repo) => repo.nameWithOwner);
 
-    // Инициализация UserStats
     const queries = new GitHubQueries(token);
     const userStats = new UserStats(username, queries, repos);
 
-    // Получаем данные о строках и просмотрах
     const totalLinesChanged = await userStats.linesChanged();
     const views = await userStats.views();
 
-    // Формирование статистики
     const stats = {
       name: user.name || username,
       stars: user.repositories.nodes.reduce(
@@ -398,21 +354,18 @@ async function main() {
       repos: user.repositories.totalCount,
     };
 
-    // Генерация SVG
     const svg = generateSVG(stats);
 
-    // Создание папки svg, если она не существует
     const svgDir = path.resolve(__dirname, "..", "svg");
     if (!fs.existsSync(svgDir)) {
       fs.mkdirSync(svgDir, { recursive: true });
     }
-
-    // Сохранение SVG в файл
     const svgFilePath = path.join(svgDir, "github_stats.svg");
     fs.writeFileSync(svgFilePath, svg);
     console.log("Создан svg файл: github_stats.svg");
   } catch (error) {
     console.error("Error generating SVG:", error);
+    process.exit(1);
   }
 }
 
