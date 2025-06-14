@@ -1,7 +1,3 @@
-<!-- Statistics: General statistics -->
-<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/github_stats.svg#gh-dark-mode-only"/>
-<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/github_stats.svg#gh-light-mode-only"/>
-
 # GitHub Stats Cards
 
 Generate SVG cards with GitHub statistics (commits, stars, unique visitors, and more) that you can use in your profile or repository README.
@@ -19,12 +15,12 @@ Generate SVG cards with GitHub statistics (commits, stars, unique visitors, and 
 
 <table border="0" align="center">
 	<td>
-		<img src="https://raw.githubusercontent.com/levvolkov/github-stats-svg/main/svg/github_stats.svg#gh-dark-mode-only"/>
-        <img src="https://raw.githubusercontent.com/levvolkov/github-stats-svg/main/svg/github_stats.svg#gh-light-mode-only"/>
+		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/github_stats.svg#gh-dark-mode-only"/>
+               <img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/github_stats.svg#gh-light-mode-only"/>
 	</td>
 	<td>
-		<img src="https://raw.githubusercontent.com/levvolkov/github-stats-svg/main/svg/language_stats.svg#gh-dark-mode-only"/>
-        <img src="https://raw.githubusercontent.com/levvolkov/github-stats-svg/main/svg/language_stats.svg#gh-light-mode-only"/>
+		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg#gh-dark-mode-only"/>
+                <img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg#gh-light-mode-only"/>
 	</td>
 </table>
 
