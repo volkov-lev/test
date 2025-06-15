@@ -12,7 +12,7 @@
 
 <p align="center">
 		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg#gh-dark-mode-only"/>
-               <img  src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg#gh-dark-mode-only"/></p>
+               <img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/github_stats.svg#gh-dark-mode-only"/></p>
 
 
 
@@ -20,7 +20,7 @@
 <table border="0" align="center">
 	<td>
 		<img width="100%" src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/github_stats.svg#gh-dark-mode-only"/>
-                <img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/github_stats.svg#gh-light-mode-only"/>
+                <ç
 	</td>
 	<td>
 		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg#gh-dark-mode-only" />
