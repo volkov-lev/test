@@ -1,6 +1,7 @@
-<table border="0" align="left">
+
+<table border="0" align="center">
 	<td>
-		<img width="385px" height="180" src="https://raw.githubusercontent.com/levvolkov/github-stats-svg/main/svg/traffic_stats.svg#gh-dark-mode-only"/>
+		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/traffic_stats.svg#gh-dark-mode-only"/>
 	</td>
 </table>
 	    
