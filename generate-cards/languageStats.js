@@ -112,7 +112,7 @@ async function fetchTopLanguages() {
       color: lang.color,
     }))
     .sort((a, b) => b.percent - a.percent)
-    .slice(0, 12); // Отображаем 12 языков
+    .slice(0, 10); // Displaying 10 languages (Отображаем 10 языков)
 
   return filteredLanguages;
 }
