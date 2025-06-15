@@ -279,7 +279,8 @@ async function generateSVG() {
       })
       .replace(",", "");
 
-    let svgContent = `<svg id="gh-dark-mode-only" width="495" height="195" xmlns="http://www.w3.org/2000/svg">
+    // let svgContent = `<svg id="gh-dark-mode-only" width="495" height="195" xmlns="http://www.w3.org/2000/svg">
+    let svgContent = `<svg id="gh-dark-mode-only" width="420" height="165" xmlns="http://www.w3.org/2000/svg">
 <style>
 svg {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
