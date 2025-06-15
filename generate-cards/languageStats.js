@@ -1,175 +1,149 @@
-const fs = require("fs");
-const path = require("path");
+const fs = require('fs');
+const path = require('path');
+const https = require('https');
 
-const username = process.env.GITHUB_ACTOR;
+const LANGUAGES_FILE_URL = 'https://raw.githubusercontent.com/github/linguist/master/lib/linguist/languages.json';
+const SVG_DIR = path.join(__dirname, 'svg');
+const SVG_WIDTH = 360;
+const SVG_HEIGHT = 210;
+
 const token = process.env.ACCESS_TOKEN;
-const exclusionThreshold = 0.9;
+const gh_actor = process.env.GITHUB_ACTOR;
 
-if (!token) {
-  console.error(
-    "Error: ACCESS_TOKEN is not defined in the environment variables."
-  );
-  process.exit(1);
-}
-
-const GRAPHQL_API = "https://api.github.com/graphql";
-
-// Colors for light and dark themes (Цвета для светлой и темной тем)
-const colors = {
-  light: {
-    background: "none", // Background color (Цвет фона)
-    title: "#FF0000", // Header color (Цвет заголовка)
-    lang: "#FF0000", // Language text color (Цвет текста языка)
-    percent: "#FF0000", // Color of percentages (Цвет процентов)
-    outline: "rgb(225, 228, 232)", // Outline color (Цвет обводки)
-    progressBackground: "#e1e4e8", // Progress bar background color (Цвет фона прогресс-бара)
-    progressItemOutline: "rgb(225, 228, 232)", // Progress bar element outline color (Цвет обводки элементов прогресс-бара)
-  },
-  dark: {
-    background: "none",
-    title: "#FF0000",
-    lang: "#FF0000",
-    percent: "#FF0000",
-    outline: "none",
-    progressBackground: "rgba(110, 118, 129, 0.4)",
-    progressItemOutline: "#393f47",
-  },
-};
-
-async function fetchFromGitHub(query, variables = {}) {
-  const response = await fetch(GRAPHQL_API, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${token}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ query, variables }),
+// Helper: fetch JSON from url
+function fetchJson(url, extraHeaders = {}) {
+  return new Promise((resolve, reject) => {
+    const headers = {
+      'User-Agent': 'lang-card-script',
+      ...extraHeaders,
+    };
+    https.get(url, {headers}, (res) => {
+      let data = '';
+      res.on('data', chunk => (data += chunk));
+      res.on('end', () => {
+        try { resolve(JSON.parse(data)); }
+        catch (e) { reject(e); }
+      });
+    }).on('error', reject);
   });
-
-  if (!response.ok) {
-    const errorText = await response.text();
-    console.error("GitHub API Error:", errorText);
-    throw new Error("Failed to fetch data from GitHub API.");
-  }
-
-  const data = await response.json();
-  if (data.errors) {
-    console.error("GitHub API Error:", JSON.stringify(data.errors, null, 2));
-    throw new Error("Failed to fetch data from GitHub API.");
-  }
-  return data.data;
 }
 
-async function fetchTopLanguages() {
-  const query = `
-    query {
-      user(login: "${username}") {
-        repositories(first: 100, ownerAffiliations: OWNER, isFork: false) {
-          nodes {
-            languages(first: 10, orderBy: {field: SIZE, direction: DESC}) {
-              edges {
-                size
-                node {
-                  name
-                  color
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  `;
+// Helper: fetch data from GitHub API (with optional token)
+function ghApi(path) {
+  const headers = token ? { Authorization: `token ${token}` } : {};
+  return fetchJson(`https://api.github.com${path}`, headers);
+}
 
-  const data = await fetchFromGitHub(query);
-  const languages = {};
-
-  for (const repo of data.user.repositories.nodes) {
-    for (const langEdge of repo.languages.edges) {
-      const lang = langEdge.node.name;
-      const size = langEdge.size;
-      const color = langEdge.node.color;
-
-      if (!languages[lang]) {
-        languages[lang] = { size: 0, color };
-      }
-      languages[lang].size += size;
-    }
+// Step 1: fetch all repos for user
+async function fetchUserRepos(username) {
+  let repos = [];
+  let page = 1;
+  while (true) {
+    const batch = await ghApi(`/users/${username}/repos?per_page=100&page=${page}`);
+    if (!Array.isArray(batch) || batch.length === 0) break;
+    repos.push(...batch);
+    if (batch.length < 100) break;
+    page++;
   }
+  return repos;
+}
 
-  const totalBytes = Object.values(languages).reduce(
-    (sum, lang) => sum + lang.size,
-    0
-  );
+// Step 2: fetch language stats for each repo
+async function fetchAllRepoLangs(repos) {
+  const out = {};
+  for (const repo of repos) {
+    // Skip forks & archived
+    if (repo.fork || repo.archived) continue;
+    try {
+      const langs = await ghApi(`/repos/${repo.owner.login}/${repo.name}/languages`);
+      for (const [lang, size] of Object.entries(langs)) {
+        out[lang] = (out[lang] || 0) + size;
+      }
+    } catch (e) { /* skip errors */ }
+  }
+  return out;
+}
 
-  const filteredLanguages = Object.entries(languages)
-    .filter(
-      ([_, lang]) => (lang.size / totalBytes) * 100 < exclusionThreshold * 100
-    )
-    .map(([name, lang]) => ({
-      lang: name,
-      percent: (lang.size / totalBytes) * 100,
-      color: lang.color,
+// Step 3: get language colors
+async function getLanguageColors() {
+  return await fetchJson(LANGUAGES_FILE_URL);
+}
+
+// Step 4: generate SVG
+function generateSvg(langStats, langColors, username, author) {
+  // Prepare sorted language array
+  const total = Object.values(langStats).reduce((a,b)=>a+b,0) || 1;
+  const sorted = Object.entries(langStats)
+    .map(([lang, size])=>({
+      lang, size,
+      percent: 100*size/total,
+      color: langColors[lang]?.color || '#ccc'
     }))
-    .sort((a, b) => b.percent - a.percent)
-    .slice(0, 12); // Отображаем 12 языков
+    .sort((a,b)=>b.size-a.size);
+  // Top 24 only
+  const top = sorted.slice(0,24);
 
-  return filteredLanguages;
-}
+  // Progress bar
+  const progressBar = top.map(l =>
+    `<span style="background-color: ${l.color};width: ${l.percent.toFixed(3)}%;" class="progress-item"></span>`
+  ).join('');
 
-function generateSVG(languageStats) {
-  const svgWidth = 360;
-  const svgHeight = 210;
+  // List
+  const langList = top.map((l,i)=>`
+<li style="animation-delay: ${i*150}ms;">
+<svg xmlns="http://www.w3.org/2000/svg" class="octicon" style="fill:${l.color};" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+  <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"></path>
+</svg>
+<span class="lang">${l.lang}</span>
+<span class="percent">${l.percent.toFixed(2)}%</span>
+</li>
+`).join('');
 
-  let svgContent = `<svg id="gh-dark-mode-only" width="${svgWidth}" height="${svgHeight}" xmlns="http://www.w3.org/2000/svg">
+  // SVG
+  return `
+<svg id="gh-dark-mode-only" width="${SVG_WIDTH}" height="${SVG_HEIGHT}" xmlns="http://www.w3.org/2000/svg">
 <style>
 svg {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: 14px;
   line-height: 21px;
 }
-
 #background {
   width: calc(100% - 10px);
   height: calc(100% - 10px);
-  fill: ${colors.light.background}; 
-  stroke: ${colors.light.outline};
+  fill: white;
+  stroke: rgb(225, 228, 232);
   stroke-width: 1px;
   rx: 6px;
   ry: 6px;
 }
-
 #gh-dark-mode-only:target #background {
-  fill: ${colors.dark.background};
-  stroke: ${colors.dark.outline};
+  fill: #0d1117;
   stroke-width: 0.5px;
 }
-
 foreignObject {
   width: calc(100% - 10px - 32px);
   height: calc(100% - 10px - 24px);
 }
-
 h2 {
   margin-top: 0;
   margin-bottom: 0.75em;
   line-height: 24px;
   font-size: 16px;
   font-weight: 600;
-  color: ${colors.light.title}; /* Цвет заголовка */
+  color: rgb(36, 41, 46);
+  fill: rgb(36, 41, 46);
 }
-
 #gh-dark-mode-only:target h2 {
-  color: ${colors.dark.title}; /* Цвет заголовка для темной темы */
+  color: #c9d1d9;
+  fill: #c9d1d9;
 }
-
 ul {
   list-style: none;
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
 }
-
 li {
   display: inline-flex;
   font-size: 12px;
@@ -179,68 +153,67 @@ li {
   transform: translateX(-500%);
   animation: slideIn 2s ease-in-out forwards;
 }
-
 @keyframes slideIn {
   to {
     transform: translateX(0);
   }
 }
-
 div.ellipsis {
   height: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
 .octicon {
-  fill: ${colors.light.percent};
+  fill: rgb(88, 96, 105);
   margin-right: 0.5ch;
   vertical-align: top;
 }
-
 #gh-dark-mode-only:target .octicon {
-  fill: ${colors.dark.percent};
+  color: #8b949e;
+  fill: #8b949e;
 }
-
 .progress {
   display: flex;
   height: 8px;
   overflow: hidden;
-  background-color: ${colors.light.progressBackground}; 
+  background-color: rgb(225, 228, 232);
   border-radius: 6px;
   outline: 1px solid transparent;
   margin-bottom: 1em;
 }
-
 #gh-dark-mode-only:target .progress {
-  background-color: ${colors.dark.progressBackground}; 
+  background-color: rgba(110, 118, 129, 0.4);
 }
-
 .progress-item {
-  outline: 2px solid ${colors.light.progressItemOutline};
+  outline: 2px solid rgb(225, 228, 232);
   border-collapse: collapse;
 }
-
 #gh-dark-mode-only:target .progress-item {
-  outline: 2px solid ${colors.dark.progressItemOutline};
+  outline: 2px solid #393f47;
 }
-
 .lang {
   font-weight: 600;
   margin-right: 4px;
-  color: ${colors.light.lang}; 
+  color: rgb(36, 41, 46);
 }
-
 #gh-dark-mode-only:target .lang {
-  color: ${colors.dark.lang}; 
+  color: #c9d1d9;
 }
-
 .percent {
-  color: ${colors.light.percent};
+  color: rgb(88, 96, 105)
 }
-
 #gh-dark-mode-only:target .percent {
-  color: ${colors.dark.percent};
+  color: #8b949e;
+}
+.author {
+  font-size: 11px;
+  color: #959da5;
+  margin-bottom: 0.25em;
+  margin-top: 0.3em;
+  display: block;
+}
+#gh-dark-mode-only:target .author {
+  color: #6e7681;
 }
 </style>
 <g>
@@ -248,66 +221,48 @@ div.ellipsis {
 <g>
 <foreignObject x="21" y="17" width="318" height="176">
 <div xmlns="http://www.w3.org/1999/xhtml" class="ellipsis">
-
-<h2>Languages Used (By File Size)</h2>
-
+<h2>${username}'s Languages Used (By File Size)</h2>
+<span class="author">Generated by: ${author || 'unknown'}</span>
 <div>
-<span class="progress">
-${languageStats
-  .map(
-    ({ lang, percent, color }) =>
-      `<span style="background-color: ${
-        color || "#cccccc"
-      }; width: ${percent}%;" class="progress-item"></span>`
-  )
-  .join("")}
-</span>
+<span class="progress">${progressBar}</span>
 </div>
-
 <ul>
-${languageStats
-  .map(
-    ({ lang, percent, color }, index) => `
-<li style="animation-delay: ${index * 150}ms;">
-<svg xmlns="http://www.w3.org/2000/svg" class="octicon" style="fill:${
-      color || "#cccccc"
-    };"
-viewBox="0 0 16 16" version="1.1" width="16" height="16"><path
-fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"></path></svg>
-<span class="lang">${lang}</span>
-<span class="percent">${percent.toFixed(2)}%</span>
-</li>`
-  )
-  .join("")}
+${langList}
 </ul>
-
 </div>
 </foreignObject>
 </g>
 </g>
-</svg>`;
-
-  return svgContent;
+</svg>
+`.trim();
 }
 
-async function createLanguageStatisticsSVG() {
-  try {
-    const languageStats = await fetchTopLanguages();
-    const svg = generateSVG(languageStats);
-
-    const dir = "svg";
-
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir);
-    }
-
-    const filePath = path.join(dir, "language_stats.svg");
-    fs.writeFileSync(filePath, svg);
-
-    console.log(`Создан svg файл: ${filePath}`);
-  } catch (error) {
-    console.error("Error generating SVG:", error);
+// MAIN
+(async ()=>{
+  let username = process.argv[2] || gh_actor;
+  if (!username) {
+    console.error('Usage: node generate-github-lang-card.js <github-username>\nOr set GITHUB_ACTOR env variable.');
+    process.exit(1);
   }
-}
+  if (!fs.existsSync(SVG_DIR)) fs.mkdirSync(SVG_DIR);
 
-createLanguageStatisticsSVG();
+  console.log(`Fetching repos for ${username}...`);
+  const repos = await fetchUserRepos(username);
+  if (repos.length === 0) {
+    console.error('No repositories found or user does not exist.');
+    process.exit(1);
+  }
+  console.log(`Aggregating language stats...`);
+  const langStats = await fetchAllRepoLangs(repos);
+  if (Object.keys(langStats).length === 0) {
+    console.error('No language data found.');
+    process.exit(1);
+  }
+  console.log('Fetching language colors...');
+  const langColors = await getLanguageColors();
+  console.log('Generating SVG...');
+  const svg = generateSvg(langStats, langColors, username, gh_actor);
+  const outfile = path.join(SVG_DIR, `${username}-language_stats.svg`);
+  fs.writeFileSync(outfile, svg, 'utf8');
+  console.log(`SVG generated: ${outfile}`);
+})();
