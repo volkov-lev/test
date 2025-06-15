@@ -1,11 +1,11 @@
 
-<table border="0" align="right">
+<table border="0" align="left">
 	<td>
 		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/streak_stats.svg#gh-dark-mode-only"/>
 	</td>
 </table>
 	    
-<table border="0" align="left">
+<table border="0" align="right">
 	<td>
 		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg#gh-dark-mode-only"/>
 	</td>
