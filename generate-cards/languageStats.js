@@ -19,8 +19,8 @@ const colors = {
   light: {
     background: "none", // Background color (Цвет фона)
     title: "#006AFF", // Header color (Цвет заголовка)
-    lang: "#000000", // Language text color (Цвет текста языка)
-    percent: "rgb(88, 96, 105)", // Color of percentages (Цвет процентов)
+    lang: "#FF0000", // Language text color (Цвет текста языка)
+    percent: "#FF0000", // Color of percentages (Цвет процентов)
     outline: "rgb(225, 228, 232)", // Outline color (Цвет обводки)
     progressBackground: "#e1e4e8", // Progress bar background color (Цвет фона прогресс-бара)
     progressItemOutline: "rgb(225, 228, 232)", // Progress bar element outline color (Цвет обводки элементов прогресс-бара)
@@ -28,8 +28,8 @@ const colors = {
   dark: {
     background: "none",
     title: "#006AFF",
-    lang: "#c9d1d9",
-    percent: "#8b949e",
+    lang: "#FF0000",
+    percent: "#FF0000",
     outline: "none",
     progressBackground: "rgba(110, 118, 129, 0.4)",
     progressItemOutline: "#393f47",
