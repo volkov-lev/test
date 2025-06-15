@@ -175,111 +175,89 @@ async function fetchFromGitHub(query, variables = {}) {
 }
 
 // Функция для генерации SVG на основе статистики
-// Функция для генерации адаптивного SVG на основе статистики
 function generateSVG(stats) {
   return `
-<svg id="gh-dark-mode-only" preserveAspectRatio="xMinYMin meet" viewBox="0 0 360 210" xmlns="http://www.w3.org/2000/svg">
-<style type="text/css">
-  @media screen and (max-width: 600px) { 
-    svg {
-      font-size: 12px !important;
-    }
-    
-    foreignObject div {
-      max-width: 100%;
-      overflow-x: hidden;
-    }
-    
-    table {
-      width: 100%;
-      font-size: inherit;
-    }
-    
-    th, td {
-      white-space: nowrap;
-      word-break: break-word;
-    }
-  }
+<svg id="gh-dark-mode-only" width="360" height="210" xmlns="http://www.w3.org/2000/svg">
+<style>
+svg {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  font-size: 14px;
+  line-height: 21px;
+}
 
-  svg {
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
-    font-size: 14px;
-    line-height: 21px;
-  }
+#background {
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  fill: ${colors.light.background};
+  stroke: ${colors.light.stroke};
+  stroke-width: 1px;
+  rx: 6px;
+  ry: 6px;
+}
 
-  #background {
-    width: calc(100% - 10px);
-    height: calc(100% - 10px);
-    fill: ${colors.light.background};
-    stroke: ${colors.light.stroke};
-    stroke-width: 1px;
-    rx: 6px;
-    ry: 6px;
-  }
+#gh-dark-mode-only:target #background {
+  fill: ${colors.dark.background};
+  stroke: ${colors.dark.stroke};
+  stroke-width: 1px;
+}
 
-  #gh-dark-mode-only:target #background {
-    fill: ${colors.dark.background};
-    stroke: ${colors.dark.stroke};
-    stroke-width: 0.5px;
-  }
+foreignObject {
+  width: calc(100% - 10px - 32px);
+  height: calc(100% - 10px - 32px);
+}
 
-  foreignObject {
-    width: calc(100% - 10px - 32px);
-    height: calc(100% - 10px - 32px);
-  }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+}
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
-  }
+th {
+  padding: 0.5em;
+  padding-top: 0;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+  color: ${colors.light.title};
+}
 
-  th {
-    padding: 0.5em;
-    padding-top: 0;
-    text-align: left;
-    font-size: 16px;
-    font-weight: 600;
-    color: ${colors.light.title};
-  }
+#gh-dark-mode-only:target th {
+  color: ${colors.dark.title};
+}
 
-  #gh-dark-mode-only:target th {
-    color: ${colors.dark.title};
-  }
+td {
+  margin-bottom: 16px;
+  margin-top: 8px;
+  padding: 0.25em;
+  font-size: 12px;
+  line-height: 18px;
+  color: ${colors.light.textPrimary};
+}
 
-  td {
-    margin-bottom: 16px;
-    margin-top: 8px;
-    padding: 0.25em;
-    font-size: 12px;
-    line-height: 18px;
-    color: ${colors.light.textPrimary};
-  }
+#gh-dark-mode-only:target td {
+  color: ${colors.dark.textPrimary};
+}
 
-  #gh-dark-mode-only:target td {
-    color: ${colors.dark.textPrimary};
-  }
+tr {
+  transform: translateX(-200%);
+  animation: slideIn 2s ease-in-out forwards;
+}
 
-  tr {
-    transform: translateX(-200%);
-    animation: slideIn 2s ease-in-out forwards;
-  }
+.octicon {
+  fill: ${colors.light.icon};
+  margin-right: 1ch;
+  vertical-align: top;
+}
 
-  .octicon {
-    fill: ${colors.light.icon};
-    margin-right: 1ch;
-    vertical-align: top;
-  }
+#gh-dark-mode-only:target .octicon {
+  fill: ${colors.dark.icon};
+}
 
-  #gh-dark-mode-only:target .octicon {
-    fill: ${colors.dark.icon};
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
   }
-
-  @keyframes slideIn {
-    to {
-      transform: translateX(0);
-    }
-  }
+}
 </style>
 <g>
 <rect x="5" y="5" id="background" />
