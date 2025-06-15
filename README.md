@@ -6,7 +6,7 @@
 	    
 <table border="0" align="right">
 	<td>
-		<img width="385px" height="180" src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg#gh-dark-mode-only"/>
+		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg#gh-dark-mode-only"/>
 	</td>
 </table>
 
