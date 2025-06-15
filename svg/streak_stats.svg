@@ -101,7 +101,7 @@ svg {
 <!-- Section 1: Total Contributions -->
 <g transform="translate(70, 60)">
   <text class="stat" y="13" text-anchor="middle" style="opacity: 0; animation: fadein 0.5s linear forwards 0.6s">
-    621
+    624
   </text>
   <text class="label" y="45" text-anchor="middle" style="opacity: 0; animation: fadein 0.5s linear forwards 0.7s">
     Total Contributions
@@ -176,7 +176,7 @@ svg {
 <!-- Footer -->
 <g transform="translate(210, 153)">
   <text class="footer" x="0" y="4" text-anchor="middle" style="opacity: 0; animation: fadein 0.5s linear forwards 1.6s">
-    Updated last at: Jun 15 2025, 23:12
+    Updated last at: Jun 15 2025, 23:21
   </text>
 </g>
 </svg>

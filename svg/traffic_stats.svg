@@ -64,7 +64,7 @@
     .folder-icons path {
       fill: rgb(88, 96, 105); 
       stroke: rgb(88, 96, 105); 
-      stroke-width: 1; 
+      stroke-width: 2; 
     }
 
     #gh-dark-mode-only:target .folder-icons path {
