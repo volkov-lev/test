@@ -1,4 +1,4 @@
-<img width="850" src="https://github.com/levvolkov/levvolkov/blob/master/assets/gifs/line.gif"/>
+ <img src="https://raw.githubusercontent.com/levvolkov/github-stats-svg/main/svg/streak_stats.svg#gh-dark-mode-only"/>
 
 
 
