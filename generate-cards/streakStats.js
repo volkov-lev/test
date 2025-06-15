@@ -279,7 +279,7 @@ async function generateSVG() {
       })
       .replace(",", "");
 
-    let svgContent = `<svg id="gh-dark-mode-only" width="420" height="165" xmlns="http://www.w3.org/2000/svg">
+    let svgContent = `<svg id="gh-dark-mode-only" width="385" height="180" xmlns="http://www.w3.org/2000/svg">
 <style>
 svg {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
@@ -317,7 +317,8 @@ svg {
 }
 
 .date {
-  font: 10px sans-serif; 
+  font: 9px sans-serif; 
+  font-weight: bold;
   fill: ${colors.light.date};
 }
 
@@ -335,7 +336,7 @@ svg {
 }
 
 .footer {
-  font: 10px sans-serif; 
+  font: 9px sans-serif; 
   fill: ${colors.light.footer};
 }
 
@@ -376,11 +377,11 @@ svg {
 <rect width="100%" height="100%" id="background" rx="13" />
 
 <!-- Divider Lines -->
-<line x1="140" y1="20" x2="140" y2="145" class="divider" />
-<line x1="280" y1="20" x2="280" y2="145" class="divider" />
+<line x1="128" y1="25" x2="128" y2="155" class="divider" />
+<line x1="256" y1="25" x2="256" y2="155" class="divider" />
 
 <!-- Section 1: Total Contributions -->
-<g transform="translate(70, 60)">
+<g transform="translate(64, 70)">
   <text class="stat" y="13" text-anchor="middle" style="opacity: 0; animation: fadein 0.5s linear forwards 0.6s">
     ${totalContributionsSum}
   </text>
@@ -393,7 +394,7 @@ svg {
 </g>
 
 <!-- Section 2: Current Streak -->
-<g style="isolation: isolate" transform="translate(210, 60)">
+<g style="isolation: isolate" transform="translate(192, 65)">
   <g mask="url(#ringMask)">
     <circle cx="0" cy="0" r="37" fill="none" class="ring" stroke-width="7.5"
            style="opacity: 0; animation: fadein 0.5s linear forwards 0.4s"/>
@@ -419,7 +420,7 @@ svg {
     Current Streak
   </text>
 
-  <text class="date" y="80" text-anchor="middle" style="opacity: 0; animation: fadein 0.5s linear forwards 1.0s">
+  <text class="date" y="85" text-anchor="middle" style="opacity: 0; animation: fadein 0.5s linear forwards 1.0s">
     ${
       currentStreak > 0 && currentStreakStart
         ? `${formatDate(new Date(currentStreakStart))} - ${formatDate(
@@ -448,7 +449,7 @@ svg {
 </g>
 
 <!-- Section 3: Longest Streak -->
-<g transform="translate(350, 60)">
+<g transform="translate(320, 70)">
   <text class="stat" y="13" text-anchor="middle" style="opacity: 0; animation: fadein 0.5s linear forwards 1.2s">
     ${longestStreak}
   </text>
@@ -461,7 +462,7 @@ svg {
 </g>
 
 <!-- Footer -->
-<g transform="translate(210, 153)">
+<g transform="translate(192, 166)">
   <text class="footer" x="0" y="4" text-anchor="middle" style="opacity: 0; animation: fadein 0.5s linear forwards 1.6s">
     Updated last at: ${lastUpdate}
   </text>
