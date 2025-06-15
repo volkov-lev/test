@@ -7,7 +7,7 @@
 
     #background {
       fill: none;
-      stroke: none;
+      stroke: blue;
       stroke-width: 1.7px;
       rx: 6px;
       ry: 6px;
