@@ -279,13 +279,12 @@ async function generateSVG() {
       })
       .replace(",", "");
 
-    // let svgContent = `<svg id="gh-dark-mode-only" width="495" height="195" xmlns="http://www.w3.org/2000/svg">
     let svgContent = `<svg id="gh-dark-mode-only" width="420" height="165" xmlns="http://www.w3.org/2000/svg">
 <style>
 svg {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
-  font-size: 12px; 
-  line-height: 18px; 
+  font-size: 10px; 
+  line-height: 15px; 
 }
 
 @keyframes fadein {
@@ -295,12 +294,12 @@ svg {
 
 @keyframes currstreak {
   0% { font-size: 3px; opacity: 0.2; }
-  80% { font-size: 28px; opacity: 1; }
-  100% { font-size: 24px; opacity: 1; }
+  80% { font-size: 24px; opacity: 1; }
+  100% { font-size: 20px; opacity: 1; }
 }
 
 .stat {
-  font: bold 28px sans-serif; 
+  font: bold 24px sans-serif; 
   fill: ${colors.light.stat};
 }
 
@@ -309,7 +308,7 @@ svg {
 }
 
 .label {
-  font: bold 14px sans-serif; 
+  font: bold 12px sans-serif; 
   fill: ${colors.light.label};
 }
 
@@ -318,7 +317,7 @@ svg {
 }
 
 .date {
-  font: 12px sans-serif; 
+  font: 10px sans-serif; 
   fill: ${colors.light.date};
 }
 
@@ -374,29 +373,29 @@ svg {
 </style>
 
 <!-- Background -->
-<rect width="100%" height="100%" id="background" rx="15" />
+<rect width="100%" height="100%" id="background" rx="13" />
 
 <!-- Divider Lines -->
-<line x1="165" y1="25" x2="165" y2="170" class="divider" />
-<line x1="330" y1="25" x2="330" y2="170" class="divider" />
+<line x1="140" y1="20" x2="140" y2="145" class="divider" />
+<line x1="280" y1="20" x2="280" y2="145" class="divider" />
 
 <!-- Section 1: Total Contributions -->
-<g transform="translate(82.5, 70)">
-  <text class="stat" y="15" text-anchor="middle" style="opacity: 0; animation: fadein 0.5s linear forwards 0.6s">
+<g transform="translate(70, 60)">
+  <text class="stat" y="13" text-anchor="middle" style="opacity: 0; animation: fadein 0.5s linear forwards 0.6s">
     ${totalContributionsSum}
   </text>
-  <text class="label" y="55" text-anchor="middle" style="opacity: 0; animation: fadein 0.5s linear forwards 0.7s">
+  <text class="label" y="45" text-anchor="middle" style="opacity: 0; animation: fadein 0.5s linear forwards 0.7s">
     Total Contributions
   </text>
-  <text class="date" y="85" text-anchor="middle" style="opacity: 0; animation: fadein 0.5s linear forwards 0.8s">
+  <text class="date" y="70" text-anchor="middle" style="opacity: 0; animation: fadein 0.5s linear forwards 0.8s">
     ${commitDateRange}
   </text>
 </g>
 
 <!-- Section 2: Current Streak -->
-<g style="isolation: isolate" transform="translate(247.5, 70)">
+<g style="isolation: isolate" transform="translate(210, 60)">
   <g mask="url(#ringMask)">
-    <circle cx="0" cy="0" r="37" fill="none" class="ring" stroke-width="8"
+    <circle cx="0" cy="0" r="37" fill="none" class="ring" stroke-width="7.5"
            style="opacity: 0; animation: fadein 0.5s linear forwards 0.4s"/>
   </g>
   <defs>
@@ -407,16 +406,20 @@ svg {
     </mask>
   </defs>
 
-  <text class="stat" y="10" text-anchor="middle" 
+  <circle cx="0" cy="0" r="31" fill="none" class="ring" stroke-width="7"
+         mask="url(#ringMask)"
+         style="opacity: 0; animation: fadein 0.5s linear forwards 0.4s"/>
+         
+         <text class="stat" y="8" text-anchor="middle" 
         style="opacity: 0; animation: currstreak 0.6s linear forwards 0s">
     ${currentStreak}
   </text>
 
-  <text class="label" y="70" text-anchor="middle" style="opacity: 0; animation: fadein 0.5s linear forwards 0.9s">
+  <text class="label" y="60" text-anchor="middle" style="opacity: 0; animation: fadein 0.5s linear forwards 0.9s">
     Current Streak
   </text>
 
-  <text class="date" y="95" text-anchor="middle" style="opacity: 0; animation: fadein 0.5s linear forwards 1.0s">
+  <text class="date" y="80" text-anchor="middle" style="opacity: 0; animation: fadein 0.5s linear forwards 1.0s">
     ${
       currentStreak > 0 && currentStreakStart
         ? `${formatDate(new Date(currentStreakStart))} - ${formatDate(
@@ -427,7 +430,7 @@ svg {
   </text>
 
   <!-- Fire icon -->
-  <g transform="translate(0, -50)" stroke-opacity="0"
+  <g transform="translate(0, -52)" stroke-opacity="0"
      style="opacity: 0; animation: fadein 0.5s linear forwards 0.6s">
     <path d="M -12 -0.5 L 15 -0.5 L 15 23.5 L -12 23.5 L -12 -0.5 Z" fill="none"/>
     <path class="fire" d="M 1.5 0.67 C 1.5 0.67 2.24 3.32 2.24 5.47 C 2.24 7.53 0.89 9.2 -1.17 9.2
@@ -445,21 +448,21 @@ svg {
 </g>
 
 <!-- Section 3: Longest Streak -->
-<g transform="translate(412.5, 70)">
-  <text class="stat" y="15" text-anchor="middle" style="opacity: 0; animation: fadein 0.5s linear forwards 1.2s">
+<g transform="translate(350, 60)">
+  <text class="stat" y="13" text-anchor="middle" style="opacity: 0; animation: fadein 0.5s linear forwards 1.2s">
     ${longestStreak}
   </text>
-  <text class="label" y="55" text-anchor="middle" style="opacity: 0; animation: fadein 0.5s linear forwards 1.3s">
+  <text class="label" y="45" text-anchor="middle" style="opacity: 0; animation: fadein 0.5s linear forwards 1.3s">
     Longest Streak
   </text>
-  <text class="date" y="85" text-anchor="middle" style="opacity: 0; animation: fadein 0.5s linear forwards 1.4s">
+  <text class="date" y="70" text-anchor="middle" style="opacity: 0; animation: fadein 0.5s linear forwards 1.4s">
     ${longestStreakDates}
   </text>
 </g>
 
 <!-- Footer -->
-<g transform="translate(247.5, 180)">
-  <text class="footer" x="0" y="5" text-anchor="middle" style="opacity: 0; animation: fadein 0.5s linear forwards 1.6s">
+<g transform="translate(210, 153)">
+  <text class="footer" x="0" y="4" text-anchor="middle" style="opacity: 0; animation: fadein 0.5s linear forwards 1.6s">
     Updated last at: ${lastUpdate}
   </text>
 </g>
