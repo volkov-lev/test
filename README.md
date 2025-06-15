@@ -23,7 +23,7 @@
 	</td>
 </table>
 
-<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/streak_stats.svg#gh-dark-mode-only"/>
+
 
 
 
