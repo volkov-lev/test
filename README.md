@@ -33,6 +33,13 @@ Generate SVG cards with GitHub statistics (commits, stars, unique visitors, and 
 	</td>
 </table>
 
+<table border="0" align="center">
+	<td>
+		<img src="https://raw.githubusercontent.com/levvolkov/github-stats-svg/main/svg/github_stats.svg#gh-dark-mode-only"/>
+		<img src="https://raw.githubusercontent.com/levvolkov/github-stats-svg/main/svg/language_stats.svg#gh-dark-mode-only" />
+	</td>
+</table>
+
 ## Features
 
 - Fetch user statistics using GitHub GraphQL and REST APIs
