@@ -1,8 +1,14 @@
- <img src="https://raw.githubusercontent.com/levvolkov/github-stats-svg/main/svg/streak_stats.svg#gh-dark-mode-only"/>
-<img src="https://raw.githubusercontent.com/levvolkov/github-stats-svg/main/svg/traffic_stats.svg#gh-dark-mode-only"/>
-
-
-
+<table border="0" align="left">
+	<td>
+		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/streak_stats.svg#gh-dark-mode-only"/>
+	</td>
+</table>
+	    
+<table border="0" align="right">
+	<td>
+		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/streak_stats.svg#gh-dark-mode-only"/>
+	</td>
+</table>
 
 <table border="0" align="center">
 	<td>
@@ -13,6 +19,7 @@
 		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg#gh-dark-mode-only" />
                 <img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg#gh-light-mode-only"/>
 	</td>
+</table>
  
 
 # GitHub Stats Cards
