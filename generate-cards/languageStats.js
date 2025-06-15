@@ -18,7 +18,7 @@ const GRAPHQL_API = "https://api.github.com/graphql";
 const colors = {
   light: {
     background: "none", // Background color (Цвет фона)
-    title: "#006AFF", // Header color (Цвет заголовка)
+    title: "#FF0000", // Header color (Цвет заголовка)
     lang: "#FF0000", // Language text color (Цвет текста языка)
     percent: "#FF0000", // Color of percentages (Цвет процентов)
     outline: "rgb(225, 228, 232)", // Outline color (Цвет обводки)
@@ -27,7 +27,7 @@ const colors = {
   },
   dark: {
     background: "none",
-    title: "#006AFF",
+    title: "#FF0000",
     lang: "#FF0000",
     percent: "#FF0000",
     outline: "none",
