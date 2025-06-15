@@ -10,8 +10,8 @@
 	</td>
 </table>
 
-<p align="center"><img width="400px" src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/streak_stats.svg#gh-dark-mode-only"/>
-<img width="400px" src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/streak_stats.svg#gh-dark-mode-only"/></p>
+<p align="center"><img width="500px" src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/streak_stats.svg#gh-dark-mode-only"/>
+<img width="500px" src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/streak_stats.svg#gh-dark-mode-only"/></p>
 
 
 
