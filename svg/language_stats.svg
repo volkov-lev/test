@@ -123,14 +123,14 @@ div.ellipsis {
 <g>
 <rect x="5" y="5" id="background" />
 <g>
-<foreignObject x="21" y="17">
+<foreignObject x="21" y="17" width="100%" height="100%">
 <div xmlns="http://www.w3.org/1999/xhtml" class="ellipsis">
 
 <h2>Languages Used (By File Size)</h2>
 
 <div>
 <span class="progress">
-<span style="background-color: #f1e05a; width: 41.16704126537343%;" class="progress-item"></span><span style="background-color: #e34c26; width: 32.669383382521296%;" class="progress-item"></span><span style="background-color: #663399; width: 26.16357535210528%;" class="progress-item"></span>
+<span style="background-color: #f1e05a; width: 41.16912663394295%;" class="progress-item"></span><span style="background-color: #e34c26; width: 32.668225397154636%;" class="progress-item"></span><span style="background-color: #663399; width: 26.16264796890241%;" class="progress-item"></span>
 </span>
 </div>
 
