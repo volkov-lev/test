@@ -1,52 +1,47 @@
 <svg id="gh-dark-mode-only" width="360" height="210" xmlns="http://www.w3.org/2000/svg">
 <style>
+
 svg {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: 14px;
   line-height: 21px;
 }
-
 #background {
   width: calc(100% - 10px);
   height: calc(100% - 10px);
-  fill: none; 
+  fill: white;
   stroke: rgb(225, 228, 232);
   stroke-width: 1px;
   rx: 6px;
   ry: 6px;
 }
-
 #gh-dark-mode-only:target #background {
-  fill: none;
-  stroke: none;
+  fill: #0d1117;
   stroke-width: 0.5px;
 }
-
 foreignObject {
   width: calc(100% - 10px - 32px);
   height: calc(100% - 10px - 24px);
 }
-
 h2 {
   margin-top: 0;
   margin-bottom: 0.75em;
   line-height: 24px;
   font-size: 16px;
   font-weight: 600;
-  color: #FF0000; /* Цвет заголовка */
+  color: rgb(36, 41, 46);
+  fill: rgb(36, 41, 46);
 }
-
 #gh-dark-mode-only:target h2 {
-  color: #FF0000; /* Цвет заголовка для темной темы */
+  color: #c9d1d9;
+  fill: #c9d1d9;
 }
-
 ul {
   list-style: none;
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
 }
-
 li {
   display: inline-flex;
   font-size: 12px;
@@ -56,69 +51,59 @@ li {
   transform: translateX(-500%);
   animation: slideIn 2s ease-in-out forwards;
 }
-
 @keyframes slideIn {
   to {
     transform: translateX(0);
   }
 }
-
 div.ellipsis {
   height: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
 .octicon {
-  fill: #FF0000;
+  fill: rgb(88, 96, 105);
   margin-right: 0.5ch;
   vertical-align: top;
 }
-
 #gh-dark-mode-only:target .octicon {
-  fill: #FF0000;
+  color: #8b949e;
+  fill: #8b949e;
 }
-
 .progress {
   display: flex;
   height: 8px;
   overflow: hidden;
-  background-color: #e1e4e8; 
+  background-color: rgb(225, 228, 232);
   border-radius: 6px;
   outline: 1px solid transparent;
   margin-bottom: 1em;
 }
-
 #gh-dark-mode-only:target .progress {
-  background-color: rgba(110, 118, 129, 0.4); 
+  background-color: rgba(110, 118, 129, 0.4);
 }
-
 .progress-item {
   outline: 2px solid rgb(225, 228, 232);
   border-collapse: collapse;
 }
-
 #gh-dark-mode-only:target .progress-item {
   outline: 2px solid #393f47;
 }
-
 .lang {
   font-weight: 600;
   margin-right: 4px;
-  color: #FF0000; 
+  color: rgb(36, 41, 46);
 }
-
 #gh-dark-mode-only:target .lang {
-  color: #FF0000; 
+  color: #c9d1d9;
 }
-
 .percent {
-  color: #FF0000;
+  color: rgb(88, 96, 105)
+}
+#gh-dark-mode-only:target .percent {
+  color: #8b949e;
 }
 
-#gh-dark-mode-only:target .percent {
-  color: #FF0000;
-}
 </style>
 <g>
 <rect x="5" y="5" id="background" />
@@ -130,7 +115,7 @@ div.ellipsis {
 
 <div>
 <span class="progress">
-<span style="background-color: #f1e05a; width: 41.15259409835893%;" class="progress-item"></span><span style="background-color: #e34c26; width: 32.67740575719255%;" class="progress-item"></span><span style="background-color: #663399; width: 26.17000014444851%;" class="progress-item"></span>
+<span style="background-color: #f1e05a;width: 41.113%;" class="progress-item"></span><span style="background-color: #e34c26;width: 32.699%;" class="progress-item"></span><span style="background-color: #663399;width: 26.187%;" class="progress-item"></span>
 </span>
 </div>
 
@@ -141,22 +126,25 @@ div.ellipsis {
 viewBox="0 0 16 16" version="1.1" width="16" height="16"><path
 fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"></path></svg>
 <span class="lang">JavaScript</span>
-<span class="percent">41.15%</span>
+<span class="percent">41.11%</span>
 </li>
+
 <li style="animation-delay: 150ms;">
 <svg xmlns="http://www.w3.org/2000/svg" class="octicon" style="fill:#e34c26;"
 viewBox="0 0 16 16" version="1.1" width="16" height="16"><path
 fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"></path></svg>
 <span class="lang">HTML</span>
-<span class="percent">32.68%</span>
+<span class="percent">32.70%</span>
 </li>
+
 <li style="animation-delay: 300ms;">
 <svg xmlns="http://www.w3.org/2000/svg" class="octicon" style="fill:#663399;"
 viewBox="0 0 16 16" version="1.1" width="16" height="16"><path
 fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"></path></svg>
 <span class="lang">CSS</span>
-<span class="percent">26.17%</span>
+<span class="percent">26.19%</span>
 </li>
+
 </ul>
 
 </div>
