@@ -1,17 +1,19 @@
 <table border="0" align="left">
 	<td>
-		<img width="385px" src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/streak_stats.svg#gh-dark-mode-only"/>
+		<img width="385px" height="180" src="https://raw.githubusercontent.com/levvolkov/github-stats-svg/main/svg/traffic_stats.svg#gh-dark-mode-only"/>
 	</td>
 </table>
 	    
 <table border="0" align="right">
 	<td>
-		<img width="385px" src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/streak_stats.svg#gh-dark-mode-only"/>
+		<img width="385px" height="180" src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg#gh-dark-mode-only"/>
 	</td>
 </table>
 
-<img src="https://raw.githubusercontent.com/levvolkov/github-stats-svg/main/svg/traffic_stats.svg#gh-dark-mode-only"/>
-
+<p align="left">
+<img width="385px" src="https://raw.githubusercontent.com/levvolkov/github-stats-svg/main/svg/traffic_stats.svg#gh-dark-mode-only"/>
+<p align="right">
+<img width="385px" src="https://raw.githubusercontent.com/levvolkov/github-stats-svg/main/svg/streak_stats.svg#gh-dark-mode-only"/></p>
 
 
 
