@@ -131,9 +131,9 @@ function generateSVG(repoStats) {
   const topRepos = sortedStats.slice(0, 5);
 
   const iconColumnWidth = 30;
-  const repoColumnWidth = 160;
+  const repoColumnWidth = 140;
   const uniquesColumnWidth = 100;
-  const dateColumnWidth = 90;
+  const dateColumnWidth = 110;
 
   const rows = Array.isArray(topRepos) ? topRepos : [];
 
@@ -185,7 +185,7 @@ function generateSVG(repoStats) {
     }
 
     .title-cards {
-      font-size: 14px; 
+      font-size: 15px; 
       font-weight: bold;
       fill: ${colors.light.titleCards}; 
     }
@@ -203,7 +203,7 @@ function generateSVG(repoStats) {
     }
 
     th {
-      font-size: 11px;
+      font-size: 11.5px;
       font-weight: 600;
       color: ${colors.light.textTitle};
       text-shadow: 
@@ -242,7 +242,7 @@ function generateSVG(repoStats) {
       font-size: 12px;
       font-weight: 600;
       color: ${colors.light.repositoryText};
-      line-height: 1.8; 
+      line-height: 1.5; 
     }
 
     #gh-dark-mode-only:target .repo-name {
@@ -250,7 +250,7 @@ function generateSVG(repoStats) {
     }
 
     .unique-count {
-      font-size: 11px;
+      font-size: 11.5px;
       font-weight: 600;
       color: ${colors.light.uniqueCount};
     }
@@ -260,7 +260,7 @@ function generateSVG(repoStats) {
     }
 
     .date-range {
-      font-size: 11px;
+      font-size: 11.5px;
       font-weight: 600; 
       color: ${colors.light.dateRange};
     }
@@ -282,19 +282,19 @@ function generateSVG(repoStats) {
   <g>
     <rect id="background" x="0" y="0" width="385" height="180" />
     
-    <g transform="translate(20, 10)">
+    <g transform="translate(16, 15)">
       <svg class="github-icon" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
       </svg>
       <text class="title-cards" x="22" y="13" font-family="Arial">Top 5 Repositories by Traffic (past two weeks)</text>
     </g>
 
-    <foreignObject x="5" y="35" width="365" height="140">
+    <foreignObject x="5" y="40" width="365" height="140">
       <table xmlns="http://www.w3.org/1999/xhtml" style="width: 100%; border-collapse: collapse;">
         <thead>
           <tr>
-            <th style="width: ${repoColumnWidth}px; text-align: left; padding-left: 25px;">Repository</th>
-            <th style="width: ${uniquesColumnWidth}px; text-align: center; padding-right: 15px;">Uniques</th>
+            <th style="width: ${repoColumnWidth}px; text-align: left; padding-left: 35px;">Repository</th>
+            <th style="width: ${uniquesColumnWidth}px; text-align: center; padding-right: 30px;">Uniques</th>
             <th style="width: ${dateColumnWidth}px; text-align: center;">Date Range</th>
           </tr>
         </thead>
