@@ -198,19 +198,19 @@ svg {
 #gh-dark-mode-only:target #background {
   fill: ${colors.dark.background};
   stroke: ${colors.dark.stroke};
-  // stroke-width: 0.5px;
+  stroke-width: 0.5px;
 }
 
 foreignObject {
   width: calc(100% - 10px - 32px);
-  height: calc(100% - 10px - 24px);
+  height: calc(100% - 10px - 32px);
 }
 
-// table {
-//   width: 100%;
-//   border-collapse: collapse;
-//   table-layout: auto;
-// }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+}
 
 th {
   padding: 0.5em;
