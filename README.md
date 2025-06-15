@@ -10,8 +10,8 @@
 	</td>
 </table>
 
-<p align="center"><img width="500px" src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/streak_stats.svg#gh-dark-mode-only"/>
-<img width="500px" src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/streak_stats.svg#gh-dark-mode-only"/></p>
+<img src="https://raw.githubusercontent.com/levvolkov/github-stats-svg/main/svg/traffic_stats.svg#gh-dark-mode-only"/>
+
 
 
 
