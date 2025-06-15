@@ -230,7 +230,7 @@ function generateSVG(repoStats) {
     .folder-icons path {
       fill: ${colors.light.folderIcons}; 
       stroke: ${colors.light.folderIconOutline}; 
-      stroke-width: 2; 
+      stroke-width: 1; 
     }
 
     #gh-dark-mode-only:target .folder-icons path {
