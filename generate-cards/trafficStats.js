@@ -16,28 +16,28 @@ const colors = {
   light: {
     background: "none", // Background color (Фоновый цвет)
     stroke: "none", // Outline color (Цвет обводки)
-    iconGithub: "rgb(88, 96, 105)", // GitHub Icon Color (Цвет иконки GitHub)
+    iconGithub: "#8b949e", // GitHub Icon Color (Цвет иконки GitHub)
     titleCards: "#006AFF", // Header Text Color (Цвет текста заголовка)
-    textTitle: "#FFFFFF", // Color of statistics column headers (Цвет заголовков столбцов статистики)
-    borderColor: "rgb(88, 96, 105)", // Border color of statistics column headers (Цвет обовдки заголовков столбцов статистики)
-    folderIcons: "rgb(88, 96, 105)", // Folder Icon Fill Color (Цвет заливки иконок папок)
-    folderIconOutline: "rgb(88, 96, 105)", // Folder Icon Outline Color (Цвет обводки иконок папок)
-    repositoryText: "#000000", // Repository name color (Цвет названия репозитория)
-    uniqueCount: "#000000", // Color of number of visitors (Цвет кол-ва посетителей)
-    dateRange: "#000000", // Date range color (Цвет диапазона дат)
+    textTitle: "#000000", // Color of statistics column headers (Цвет заголовков столбцов статистики)
+    borderColor: "#8b949e", // Border color of statistics column headers (Цвет обовдки заголовков столбцов статистики)
+    folderIcons: "#8b949e", // Folder Icon Fill Color (Цвет заливки иконок папок)
+    folderIconOutline: "#8b949e", // Folder Icon Outline Color (Цвет обводки иконок папок)
+    repositoryText: "#c9d1d9", // Repository name color (Цвет названия репозитория)
+    uniqueCount: "#c9d1d9", // Color of number of visitors (Цвет кол-ва посетителей)
+    dateRange: "#c9d1d9", // Date range color (Цвет диапазона дат)
   },
   dark: {
     background: "none",
     stroke: "none",
-    iconGithub: "#8b949e",
+    iconGithub: "rgb(88, 96, 105)",
     titleCards: "#006AFF",
-    textTitle: "#000000",
-    borderColor: "#8b949e",
-    folderIcons: "#8b949e",
-    folderIconOutline: "#8b949e",
-    repositoryText: "#c9d1d9",
-    uniqueCount: "#c9d1d9",
-    dateRange: "#c9d1d9",
+    textTitle: "#FFFFFF",
+    borderColor: "rgb(88, 96, 105)",
+    folderIcons: "rgb(88, 96, 105)",
+    folderIconOutline: "rgb(88, 96, 105)",
+    repositoryText: "#000000",
+    uniqueCount: "#000000",
+    dateRange: "#000000",
   },
 };
 
