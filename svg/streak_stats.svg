@@ -102,13 +102,13 @@ svg {
 <!-- Section 1: Total Contributions -->
 <g transform="translate(64, 70)">
   <text class="stat" y="13" text-anchor="middle" style="opacity: 0; animation: fadein 0.5s linear forwards 0.6s">
-    624
+    633
   </text>
   <text class="label" y="45" text-anchor="middle" style="opacity: 0; animation: fadein 0.5s linear forwards 0.7s">
     Total Contributions
   </text>
   <text class="date" y="70" text-anchor="middle" style="opacity: 0; animation: fadein 0.5s linear forwards 0.8s">
-    Sep 24, 2023 - Jun 15, 2025
+    Sep 24, 2023 - Jun 16, 2025
   </text>
 </g>
 
@@ -132,7 +132,7 @@ svg {
          
          <text class="stat" y="8" text-anchor="middle" 
         style="opacity: 0; animation: currstreak 0.6s linear forwards 0s">
-    2
+    3
   </text>
 
   <text class="label" y="60" text-anchor="middle" style="opacity: 0; animation: fadein 0.5s linear forwards 0.9s">
@@ -140,7 +140,7 @@ svg {
   </text>
 
   <text class="date" y="85" text-anchor="middle" style="opacity: 0; animation: fadein 0.5s linear forwards 1.0s">
-    Jun 14, 2025 - Jun 15, 2025
+    Jun 14, 2025 - Jun 16, 2025
   </text>
 
   <!-- Fire icon -->
@@ -177,7 +177,7 @@ svg {
 <!-- Footer -->
 <g transform="translate(192, 166)">
   <text class="footer" x="0" y="4" text-anchor="middle" style="opacity: 0; animation: fadein 0.5s linear forwards 1.6s">
-    Updated last at: Jun 16 2025, 02:11
+    Updated last at: Jun 16 2025, 04:01
   </text>
 </g>
 </svg>
