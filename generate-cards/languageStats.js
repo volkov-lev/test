@@ -19,20 +19,20 @@ const colors = {
   light: {
     background: "none", // Background color (Цвет фона)
     title: "#006AFF", // Header color (Цвет заголовка)
-    lang: "#000000", // Language text color (Цвет текста языка)
-    percent: "rgb(88, 96, 105)", // Color of percentages (Цвет процентов)
+    lang: "#c9d1d9", // Language text color (Цвет текста языка)
+    percent: "#8b949e", // Color of percentages (Цвет процентов)
     outline: "none", //"rgb(225, 228, 232)", // Outline color (Цвет обводки)
-    progressBackground: "#e1e4e8", // Progress bar background color (Цвет фона прогресс-бара)
-    progressItemOutline: "rgb(225, 228, 232)", // Progress bar element outline color (Цвет обводки элементов прогресс-бара)
+    progressBackground: "rgba(110, 118, 129, 0.4)", // Progress bar background color (Цвет фона прогресс-бара)
+    progressItemOutline: "#393f47", // Progress bar element outline color (Цвет обводки элементов прогресс-бара)
   },
   dark: {
     background: "none",
     title: "#006AFF",
-    lang: "#c9d1d9",
-    percent: "#8b949e",
+    lang: "#000000",
+    percent: "rgb(88, 96, 105)",
     outline: "none", //"rgb(225, 228, 232)",
-    progressBackground: "rgba(110, 118, 129, 0.4)",
-    progressItemOutline: "#393f47",
+    progressBackground: "#e1e4e8",
+    progressItemOutline: "rgb(225, 228, 232)",
   },
 };
 
