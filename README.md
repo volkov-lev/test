@@ -3,9 +3,9 @@
 <table align="right">
 	<tr>
 		<td align="center">
-			<p><img width="386"src="https://github.com/levvolkov/levvolkov/blob/master/assets/gifs/line.gif"></p>
+			<p><img width="385"src="https://github.com/levvolkov/levvolkov/blob/master/assets/gifs/line.gif"></p>
 			<img height="160px" src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg"/>
-			<p><img width="386"src="https://github.com/levvolkov/levvolkov/blob/master/assets/gifs/line.gif"></p>
+			<p><img width="385"src="https://github.com/levvolkov/levvolkov/blob/master/assets/gifs/line.gif"></p>
 		</td>
 	</tr>
 </table>
@@ -13,9 +13,9 @@
 <table align="left">
 	<tr>
 		<td align="center">
-			<p><img width="386px" src="https://github.com/levvolkov/levvolkov/blob/master/assets/gifs/line.gif"></p>
+			<p><img width="385px" src="https://github.com/levvolkov/levvolkov/blob/master/assets/gifs/line.gif"></p>
 			<img height="160" src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/streak_stats.svg"/>
-			<p><img width="386px" src="https://github.com/levvolkov/levvolkov/blob/master/assets/gifs/line.gif"></p>
+			<p><img width="385px" src="https://github.com/levvolkov/levvolkov/blob/master/assets/gifs/line.gif"></p>
 		</td>
 	</tr>
 </table>
