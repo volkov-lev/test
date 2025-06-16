@@ -301,14 +301,14 @@ const REST_API = "https://api.github.com";
 const colors = {
   light: {
     background: "none", // Background color (Цвет фона)
-    stroke: "rgb(225, 228, 232)", // Outline color (Цвет обводки)
+    stroke: "none", // Outline color (Цвет обводки)
     title: "rgb(0, 106, 255)", // Header color (Цвет заголовка)
     textPrimary: "rgb(88, 96, 105)", // Main text color (Цвет основного текста
     icon: "rgb(88, 96, 105)", // Color of icons (Цвет иконок)
   },
   dark: {
     background: "none",
-    stroke: "rgba(225, 228, 232, 0.5)",
+    stroke: "none",
     title: "#006AFF",
     textPrimary: "#c9d1d9",
     icon: "#8b949e",
