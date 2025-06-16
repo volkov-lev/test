@@ -203,7 +203,7 @@ svg {
 
 foreignObject {
   width: calc(100% - 10px - 32px);
-  height: calc(100% - 10px - 24px);
+  height: calc(100% - 10px - 32px);
 }
 
 table {
@@ -226,7 +226,7 @@ th {
 }
 
 td {
-  padding: 0.20em;
+  padding: 0.13em;
   font-size: 12px;
   line-height: 16px;
   color: ${colors.light.textPrimary};
