@@ -135,6 +135,11 @@ svg {
   ry: 6px;
 }
 
+foreignObject {
+  width: calc(100% - 10px - 32px);
+  height: calc(100% - 10px - 24px);
+}
+
 h2 {
   margin-top: 0;
   margin-bottom: 0.75em;
@@ -205,15 +210,35 @@ div.ellipsis {
   #background {
     fill: ${colors.dark.background};
     stroke: ${colors.dark.outline};
+    stroke-width: 0.5px;
   }
-  h2 { color: ${colors.dark.title}; }
-  .octicon { fill: ${colors.dark.percent}; }
-  .progress { background-color: ${colors.dark.progressBackground}; }
-  .progress-item { outline: 2px solid ${colors.dark.progressItemOutline}; }
-  .lang { color: ${colors.dark.lang}; }
-  .percent { color: ${colors.dark.percent}; }
+  
+  h2 { 
+  color: ${colors.dark.title}; 
+  }
+  
+  .octicon { 
+  fill: ${colors.dark.percent}; 
+  }
+  
+  .progress { 
+  background-color: ${colors.dark.progressBackground}; 
+  }
+  
+  .progress-item { 
+  outline: 2px solid ${colors.dark.progressItemOutline}; 
+  }
+  
+  .lang { 
+  color: ${colors.dark.lang}; 
+  }
+  
+  .percent { 
+  color: ${colors.dark.percent}; 
+  }
 }
 </style>
+
 <g>
 <rect x="5" y="5" id="background" />
 <g>
