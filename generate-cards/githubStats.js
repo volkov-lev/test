@@ -16,17 +16,17 @@ const REST_API = "https://api.github.com";
 const colors = {
   light: {
     background: "none", // Background color (Цвет фона)
-    stroke: "none", //"rgb(225, 228, 232)", // Outline color (Цвет обводки)
-    title: "rgb(0, 106, 255)", // Header color (Цвет заголовка)
+    stroke: "none", //"rgb(225, 228, 232, 0.5)", // Outline color (Цвет обводки)
+    title: "#006AFF", // Header color (Цвет заголовка)
     textPrimary: "rgb(88, 96, 105)", // Main text color (Цвет основного текста
-    icon: "rgb(88, 96, 105)", // Color of icons (Цвет иконок)
+    icon: "#8b949e", // Color of icons (Цвет иконок)
   },
   dark: {
     background: "none",
-    stroke: "none", //"rgba(225, 228, 232, 0.5)",
-    title: "#006AFF",
+    stroke: "none", //"rgba(225, 228, 232)",
+    title: "rgb(0, 106, 255)",
     textPrimary: "#c9d1d9",
-    icon: "#8b949e",
+    icon: "rgb(88, 96, 105)",
   },
 };
 
