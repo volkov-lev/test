@@ -1,17 +1,13 @@
-<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg#gh-dark-mode-only" alt="GitHub Stats (light)">
-<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg#gh-light-mode-only" alt="GitHub Stats (dark)">
 
-<picture>
-  <source srcset="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg" media="(prefers-color-scheme: dark)">
-  <source srcset="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg" media="(prefers-color-scheme: light)">
-  <img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg" alt="SVG">
-</picture>
+
+
 
 <table align="right">
 	<tr>
 		<td align="center" width="411.5">
 			<img src="https://github.com/levvolkov/levvolkov/blob/master/assets/gifs/line.gif">
-			<img height="176" src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg"/>
+			<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg#gh-dark-mode-only">
+                        <img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg#gh-light-mode-only">
 			<img src="https://github.com/levvolkov/levvolkov/blob/master/assets/gifs/line.gif">
 		</td>
 	</tr>
@@ -20,9 +16,10 @@
 <table align="left">
 	<tr>
 		<td align="center" width="411.5">
-			<p><img src="https://github.com/levvolkov/levvolkov/blob/master/assets/gifs/line.gif"></p>
-			<img height="160" src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/streak_stats.svg"/>
-			<p><img src="https://github.com/levvolkov/levvolkov/blob/master/assets/gifs/line.gif"></p>
+			<img src="https://github.com/levvolkov/levvolkov/blob/master/assets/gifs/line.gif">
+			<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/streak_stats.svg#gh-dark-mode-only"/>
+			<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/streak_stats.svg#gh-light-mode-only"/>
+			<img src="https://github.com/levvolkov/levvolkov/blob/master/assets/gifs/line.gif">
 		</td>
 	</tr>
 </table>
@@ -30,13 +27,15 @@
 
 <table border="1" align="left">
 	<td>
-		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/streak_stats.svg"/>
+		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/streak_stats.svg#gh-dark-mode-only"/>
+		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/streak_stats.svg#gh-light-mode-only"/>
 	</td>
 </table>
 	    
 <table border="1" align="right">
 	<td>
-		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg"/>
+		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg#gh-dark-mode-only">
+                <img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg#gh-light-mode-only">
 	</td>
 </table>
 
