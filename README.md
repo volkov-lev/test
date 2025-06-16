@@ -1,49 +1,23 @@
-<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg"/>
 
-<table align="right" width="100%">
-  <tr>
-    <td align="center" width="100%">
 
-<p align="center">
-<img width="386px" src="https://github.com/levvolkov/levvolkov/blob/master/assets/gifs/line.gif">             
-</p>
-      
-<picture>
-  <source srcset="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg" 
-	  media="(prefers-color-scheme: dark)"/>
-  <source srcset="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg" 
-	  media="(prefers-color-scheme: light)" />
-  <img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg" height="160px"  alt="LevVolkov trophy stats"/>
-</picture>
-
-<p align="center">
-<img width="386px" src="https://github.com/levvolkov/levvolkov/blob/master/assets/gifs/line.gif">             
-</p>
-      
- </td>
-  </tr>
+<table align="right">
+	<tr>
+		<td align="center">
+			<p><img width="386"src="https://github.com/levvolkov/levvolkov/blob/master/assets/gifs/line.gif"></p>
+			<img height="160px" src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg"/>
+			<p><img width="386"src="https://github.com/levvolkov/levvolkov/blob/master/assets/gifs/line.gif"></p>
+		</td>
+	</tr>
 </table>
 
-<table align="left" width="100%">
-  <tr>
-    <td align="center" width="100%">
-
-<p align="center">
-<img width="386px" src="https://github.com/levvolkov/levvolkov/blob/master/assets/gifs/line.gif">             
-</p>
-      
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/volkov-lev/test/main/svg/streak_stats.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://github-profile-trophy.vercel.app/?username=levvolkov&theme=flat&no-frame=true&column=3&row=2&no-bg=true" />
-  <img src="https://github-profile-trophy.vercel.app/?username=levvolkov&theme=algolia&no-frame=true&column=3&row=2&no-bg=true" height="160px"  alt="LevVolkov trophy stats"/>
-</picture>
-
-<p align="center">
-<img width="386px" src="https://github.com/levvolkov/levvolkov/blob/master/assets/gifs/line.gif">             
-</p>
-      
- </td>
-  </tr>
+<table align="left">
+	<tr>
+		<td align="center">
+			<p><img width="386px" src="https://github.com/levvolkov/levvolkov/blob/master/assets/gifs/line.gif"></p>
+			<img height="160" src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/streak_stats.svg"/>
+			<p><img width="386px" src="https://github.com/levvolkov/levvolkov/blob/master/assets/gifs/line.gif"></p>
+		</td>
+	</tr>
 </table>
 
 
@@ -56,25 +30,25 @@
 
 <table border="0" align="left">
 	<td>
-		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/streak_stats.svg#gh-dark-mode-only"/>
+		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/streak_stats.svg"/>
 	</td>
 </table>
 	    
 <table border="0" align="right">
 	<td>
-		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg#gh-dark-mode-only"/>
+		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg"/>
 	</td>
 </table>
 
 <table border="0" align="left">
 	<td>
-		 <img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/github_stats.svg#gh-dark-mode-only"/>
+		 <img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/github_stats.svg"/>
 	</td>
 </table>
 	    
 <table border="0" align="right">
 	<td>
-		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/traffic_stats.svg#gh-dark-mode-only"/>
+		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/traffic_stats.svg"/>
 	</td>
 </table>
 
@@ -86,11 +60,11 @@
 
 <table border="0" align="center">
 	<td>
-		<img width="100%" src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/github_stats.svg#gh-dark-mode-only"/>
+		<img width="100%" src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/github_stats.svg"/>
              </td>
 	<td>
-		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg#gh-dark-mode-only" />
-                <img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg#gh-light-mode-only"/>
+		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg"/>
+                <img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg"/>
 	</td>
 </table>
  
