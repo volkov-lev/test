@@ -177,7 +177,7 @@ svg {
 <!-- Footer -->
 <g transform="translate(192, 166)">
   <text class="footer" x="0" y="4" text-anchor="middle" style="opacity: 0; animation: fadein 0.5s linear forwards 1.6s">
-    Updated last at: Jun 16 2025, 21:08
+    Updated last at: Jun 16 2025, 21:17
   </text>
 </g>
 </svg>
