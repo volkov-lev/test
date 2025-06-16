@@ -1,4 +1,8 @@
-
+<picture>
+  <source srcset="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg" media="(prefers-color-scheme: dark)">
+  <source srcset="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg" media="(prefers-color-scheme: light)">
+  <img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg" alt="SVG">
+</picture>
 
 <table align="right">
 	<tr>
