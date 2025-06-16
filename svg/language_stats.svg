@@ -70,54 +70,54 @@ div.ellipsis {
 }
 
 .octicon {
-  fill: rgb(88, 96, 105);
+  fill: #8b949e;
   margin-right: 0.5ch;
   vertical-align: top;
 }
 
 #gh-dark-mode-only:target .octicon {
-  fill: #8b949e;
+  fill: rgb(88, 96, 105);
 }
 
 .progress {
   display: flex;
   height: 8px;
   overflow: hidden;
-  background-color: #e1e4e8; 
+  background-color: rgba(110, 118, 129, 0.4); 
   border-radius: 6px;
   outline: 1px solid transparent;
   margin-bottom: 1em;
 }
 
 #gh-dark-mode-only:target .progress {
-  background-color: rgba(110, 118, 129, 0.4); 
+  background-color: #e1e4e8; 
 }
 
 .progress-item {
-  outline: 2px solid rgb(225, 228, 232);
+  outline: 2px solid #393f47;
   border-collapse: collapse;
 }
 
 #gh-dark-mode-only:target .progress-item {
-  outline: 2px solid #393f47;
+  outline: 2px solid rgb(225, 228, 232);
 }
 
 .lang {
   font-weight: 600;
   margin-right: 4px;
-  color: #000000; 
-}
-
-#gh-dark-mode-only:target .lang {
   color: #c9d1d9; 
 }
 
+#gh-dark-mode-only:target .lang {
+  color: #000000; 
+}
+
 .percent {
-  color: rgb(88, 96, 105);
+  color: #8b949e;
 }
 
 #gh-dark-mode-only:target .percent {
-  color: #8b949e;
+  color: rgb(88, 96, 105);
 }
 </style>
 <g>
@@ -130,7 +130,7 @@ div.ellipsis {
 
 <div>
 <span class="progress">
-<span style="background-color: #f1e05a; width: 41.16464677098965%;" class="progress-item"></span><span style="background-color: #e34c26; width: 32.67071302251754%;" class="progress-item"></span><span style="background-color: #663399; width: 26.164640206492813%;" class="progress-item"></span>
+<span style="background-color: #f1e05a; width: 41.16619162838571%;" class="progress-item"></span><span style="background-color: #e34c26; width: 32.6698551778735%;" class="progress-item"></span><span style="background-color: #663399; width: 26.163953193740785%;" class="progress-item"></span>
 </span>
 </div>
 
@@ -141,7 +141,7 @@ div.ellipsis {
 viewBox="0 0 16 16" version="1.1" width="16" height="16"><path
 fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"></path></svg>
 <span class="lang">JavaScript</span>
-<span class="percent">41.16%</span>
+<span class="percent">41.17%</span>
 </li>
 <li style="animation-delay: 150ms;">
 <svg xmlns="http://www.w3.org/2000/svg" class="octicon" style="fill:#e34c26;"

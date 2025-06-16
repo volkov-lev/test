@@ -29,32 +29,32 @@
     }
 
     .github-icon path {
-      fill: rgb(88, 96, 105);
+      fill: #8b949e;
     }
 
     #gh-dark-mode-only:target .github-icon path {
-      fill: #8b949e;
+      fill: rgb(88, 96, 105);
     }
 
     th {
       font-size: 11.5px;
       font-weight: 600;
-      color: #FFFFFF;
+      color: #000000;
       text-shadow: 
-        1px 1px 0px rgb(88, 96, 105), 
-        -1px -1px 0px rgb(88, 96, 105), 
-        1px -1px 0px rgb(88, 96, 105), 
-        -1px 1px 0px rgb(88, 96, 105);
+        1px 1px 0px #8b949e, 
+        -1px -1px 0px #8b949e, 
+        1px -1px 0px #8b949e, 
+        -1px 1px 0px #8b949e;
       padding-bottom: 5px;
     }
 
     #gh-dark-mode-only:target th {
-      color: #000000;
+      color: #FFFFFF;
       text-shadow: 
-        0.7px 0.7px 0px #8b949e, 
-        -0.7px -0.7px 0px #8b949e, 
-        0.7px -0.7px 0px #8b949e, 
-        -0.7px 0.7px 0px #8b949e;
+        0.7px 0.7px 0px rgb(88, 96, 105), 
+        -0.7px -0.7px 0px rgb(88, 96, 105), 
+        0.7px -0.7px 0px rgb(88, 96, 105), 
+        -0.7px 0.7px 0px rgb(88, 96, 105);
     }
 
     .folder-icons {
@@ -62,45 +62,45 @@
     }
 
     .folder-icons path {
-      fill: rgb(88, 96, 105); 
-      stroke: rgb(88, 96, 105); 
+      fill: #8b949e; 
+      stroke: #8b949e; 
       stroke-width: 1; 
     }
 
     #gh-dark-mode-only:target .folder-icons path {
-      fill: #8b949e; 
-      stroke: #8b949e; 
+      fill: rgb(88, 96, 105); 
+      stroke: rgb(88, 96, 105); 
     }
 
     .repo-name {
       font-size: 12px;
       font-weight: 600;
-      color: #000000;
+      color: #c9d1d9;
       line-height: 1.5; 
     }
 
     #gh-dark-mode-only:target .repo-name {
-      color: #c9d1d9;
+      color: #000000;
     }
 
     .unique-count {
       font-size: 11.5px;
       font-weight: 600;
-      color: #000000;
+      color: #c9d1d9;
     }
 
     #gh-dark-mode-only:target .unique-count {
-      color: #c9d1d9;
+      color: #000000;
     }
 
     .date-range {
       font-size: 11.5px;
       font-weight: 600; 
-      color: #000000;
+      color: #c9d1d9;
     }
 
     #gh-dark-mode-only:target .date-range {
-      color: #c9d1d9;
+      color: #000000;
     }
 
     @keyframes fadein {
