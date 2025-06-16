@@ -33,13 +33,13 @@
 	</td>
 </table>
 
-<table border="0" align="left">
+<table border="1" align="left">
 	<td>
 		 <img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/github_stats.svg"/>
 	</td>
 </table>
 	    
-<table border="0" align="right">
+<table border="1" align="right">
 	<td>
 		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/traffic_stats.svg"/>
 	</td>
