@@ -2,10 +2,10 @@
 
 <table align="right">
 	<tr>
-		<td align="center">
-			<p><img width="360"src="https://github.com/levvolkov/levvolkov/blob/master/assets/gifs/line.gif"></p>
-			<img height="160px" src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg"/>
-			<p><img width="360"src="https://github.com/levvolkov/levvolkov/blob/master/assets/gifs/line.gif"></p>
+		<td align="center" width="411">
+			<p ><img src="https://github.com/levvolkov/levvolkov/blob/master/assets/gifs/line.gif"></p>
+			<img height="160" src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg"/>
+			<p><img src="https://github.com/levvolkov/levvolkov/blob/master/assets/gifs/line.gif"></p>
 		</td>
 	</tr>
 </table>
