@@ -1,4 +1,4 @@
-
+<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg"/>
 
 <table align="right" width="100%">
   <tr>
