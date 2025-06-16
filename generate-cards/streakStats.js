@@ -18,23 +18,24 @@ const colors = {
   light: {
     background: "none", // Background color (Цвет фона)
     stroke: "none", // Outline color (Цвет обводки)
-    stat: "#000000", // Color of statistics (Цвет статистики)
-    label: "#000000", // Color of labels (Цвет меток)
+    stat: "#c9d1d9", // Color of statistics (Цвет статистики)
+    label: "#c9d1d9", // Color of labels (Цвет меток)
     date: "#006AFF", // Color of dates (Цвет дат)
     divider: "#006AFF", // Color of dividers (Цвет разделителей)
     ring: "#006AFF", // Ring color (Цвет кольца)
     fire: "#006AFF", // Fire icon color (Цвет иконки огня)
-    footer: "#000000", // Footer color (Цвет футера)
+    footer: "#c9d1d9", // Footer color (Цвет футера)
   },
   dark: {
     background: "none",
-    stat: "#c9d1d9",
-    label: "#c9d1d9",
+    stroke: "none",
+    stat: "#000000",
+    label: "#000000",
     date: "#006AFF",
     divider: "#006AFF",
     ring: "#006AFF",
     fire: "#006AFF",
-    footer: "#c9d1d9",
+    footer: "#000000",
   },
 };
 
