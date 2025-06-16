@@ -216,8 +216,8 @@ th {
   padding: 0.25em;
   padding-top: 0;
   text-align: left;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: bold;
   color: ${colors.light.title};
 }
 
