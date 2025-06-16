@@ -1,28 +1,5 @@
 const fs = require("fs");
 const path = require("path");
-
-// === Конфигуратор цветовых схем ===
-const colors = {
-  light: {
-    background: "#fff",
-    title: "#006AFF",
-    lang: "#222222",
-    percent: "#888888",
-    outline: "#e1e4e8",
-    progressBackground: "#f0f0f0",
-    progressItemOutline: "#393f47"
-  },
-  dark: {
-    background: "#22272e",
-    title: "#58a6ff",
-    lang: "#c9d1d9",
-    percent: "#8b949e",
-    outline: "#444c56",
-    progressBackground: "#444c56",
-    progressItemOutline: "#e1e4e8"
-  }
-};
-
 const username = process.env.GITHUB_ACTOR;
 const token = process.env.ACCESS_TOKEN;
 const exclusionThreshold = 0.9;
@@ -32,6 +9,28 @@ if (!token) {
   console.error("Error: ACCESS_TOKEN is not defined in the environment variables.");
   process.exit(1);
 }
+
+// Colors for light and dark themes (Цвета для светлой и темной тем)
+const colors = {
+  light: {
+    background: "none", // Background color (Цвет фона)
+    title: "#006AFF", // Header color (Цвет заголовка)
+    lang: "#000000", // Language text color (Цвет текста языка)
+    percent: "rgb(88, 96, 105)", // Color of percentages (Цвет процентов)
+    outline: "rgb(225, 228, 232)", // Outline color (Цвет обводки)
+    progressBackground: "#e1e4e8", // Progress bar background color (Цвет фона прогресс-бара)
+    progressItemOutline: "rgb(225, 228, 232)", // Progress bar element outline color (Цвет обводки элементов прогресс-бара)
+  },
+  dark: {
+    background: "none",
+    title: "#006AFF",
+    lang: "#c9d1d9",
+    percent: "#8b949e",
+    outline: "rgb(225, 228, 232)",
+    progressBackground: "rgba(110, 118, 129, 0.4)",
+    progressItemOutline: "#393f47",
+  },
+};
 
 async function fetchFromGitHub(query, variables = {}) {
   const response = await fetch(GRAPHQL_API, {
