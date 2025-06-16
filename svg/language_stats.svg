@@ -10,7 +10,7 @@ svg {
   width: calc(100% - 10px);
   height: calc(100% - 10px);
   fill: none;
-  stroke: rgb(225, 228, 232);
+  stroke: none;
   stroke-width: 1px;
   rx: 6px;
   ry: 6px;
@@ -85,7 +85,7 @@ div.ellipsis {
 @media (prefers-color-scheme: dark) {
   #background {
     fill: none;
-    stroke: rgb(225, 228, 232);
+    stroke: none;
   }
   h2 { color: #006AFF; }
   .octicon { fill: #8b949e; }
@@ -103,7 +103,7 @@ div.ellipsis {
     <h2>Languages Used (By File Size)</h2>
     <div>
       <span class="progress">
-        <span style="background-color: #f1e05a; width: 41.77058442123756%;" class="progress-item"></span><span style="background-color: #e34c26; width: 32.334241598546775%;" class="progress-item"></span><span style="background-color: #663399; width: 25.89517398021567%;" class="progress-item"></span>
+        <span style="background-color: #f1e05a; width: 41.76854147500169%;" class="progress-item"></span><span style="background-color: #e34c26; width: 32.335376027194336%;" class="progress-item"></span><span style="background-color: #663399; width: 25.896082497803974%;" class="progress-item"></span>
       </span>
     </div>
     <ul>
@@ -122,7 +122,7 @@ div.ellipsis {
           <circle cx="8" cy="8" r="4"/>
         </svg>
         <span class="lang">HTML</span>
-        <span class="percent">32.33%</span>
+        <span class="percent">32.34%</span>
       </li>
       <li style="animation-delay: 300ms;">
         <svg xmlns="http://www.w3.org/2000/svg" class="octicon" style="fill:#663399;"
