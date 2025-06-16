@@ -226,7 +226,7 @@ th {
 }
 
 td {
-  padding: 0.17em;
+  padding: 0.20em;
   font-size: 12px;
   line-height: 16px;
   color: ${colors.light.textPrimary};
