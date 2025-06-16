@@ -21,13 +21,13 @@
 </table>
 
 
-<table border="1#gh-light-mode-only" align="left">
+<table border="1" align="left">
 	<td>
 		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/streak_stats.svg"/>
 	</td>
 </table>
 	    
-<table border="1#gh-light-mode-only" align="right">
+<table border="1" align="right">
 	<td>
 		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg"/>
 	</td>
