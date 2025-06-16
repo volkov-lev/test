@@ -21,13 +21,6 @@
 </table>
 
 
-
-
-
-
-
-
-
 <table border="0" align="left">
 	<td>
 		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/streak_stats.svg"/>
@@ -64,7 +57,6 @@
              </td>
 	<td>
 		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg"/>
-                <img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg"/>
 	</td>
 </table>
  
