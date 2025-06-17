@@ -15,15 +15,15 @@ const REST_API = "https://api.github.com";
 // Colors for light and dark themes (Цвета для светлой и темной темы)
 const colors = {
   light: {
+    stroke: "rgb(225, 228, 232)", // Outline color (Цвет обводки)
     background: "none", // Background color (Цвет фона)
-    stroke: "none", // Outline color (Цвет обводки)
     title: "rgb(0, 106, 255)", // Header color (Цвет заголовка)
     textPrimary: "rgb(88, 96, 105)", // Main text color (Цвет основного текста
     icon: "rgb(88, 96, 105)", // Color of icons (Цвет иконок)
   },
   dark: {
+    stroke: "rgba(225, 228, 232, 0.5)",
     background: "none",
-    stroke: "none",
     title: "#006AFF",
     textPrimary: "#c9d1d9",
     icon: "#8b949e",
