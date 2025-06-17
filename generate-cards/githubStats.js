@@ -181,8 +181,8 @@ function generateSVG(stats) {
 <style>
 svg {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 14px;
+  line-height: 11px;
 }
 
 #background {
