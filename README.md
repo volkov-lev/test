@@ -1,74 +1,34 @@
-
-
-
-
-<table align="right">
-	<tr>
-		<td align="center" width="411.5">
-			<img src="https://github.com/levvolkov/levvolkov/blob/master/assets/gifs/line.gif">
-			<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg#gh-dark-mode-only">
-                        <img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg#gh-light-mode-only">
-			<img src="https://github.com/levvolkov/levvolkov/blob/master/assets/gifs/line.gif">
-		</td>
-	</tr>
-</table>
-
-<table align="left">
-	<tr>
-		<td align="center" width="411.5">
-			<img src="https://github.com/levvolkov/levvolkov/blob/master/assets/gifs/line.gif">
-			<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/streak_stats.svg#gh-dark-mode-only"/>
-			<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/streak_stats.svg#gh-light-mode-only"/>
-			<img src="https://github.com/levvolkov/levvolkov/blob/master/assets/gifs/line.gif">
-		</td>
-	</tr>
-</table>
-
-
-<table border="1" align="left">
+<table border="1" align="center">
 	<td>
 		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/streak_stats.svg#gh-dark-mode-only"/>
 		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/streak_stats.svg#gh-light-mode-only"/>
 	</td>
-</table>
-	    
-<table border="1" align="right">
 	<td>
-		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg#gh-dark-mode-only">
-                <img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg#gh-light-mode-only">
-	</td>
-</table>
-
-<table border="1" align="left">
-	<td>
-		 <img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/github_stats.svg#gh-dark-mode-only"/>
-		 <img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/github_stats.svg#gh-light-mode-only"/>
-	</td>
-</table>
-	    
-<table border="1" align="right">
-	<td>
-		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/traffic_stats.svg#gh-dark-mode-only"/>
+                <img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/traffic_stats.svg#gh-dark-mode-only"/>
 		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/traffic_stats.svg#gh-light-mode-only"/>
 	</td>
 </table>
-
-
-
-
-
-
-
-<table border="0" align="center">
+	    
+<table border="1" align="center">
+	<td>
+		<img width="" src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg#gh-dark-mode-only">
+                <img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg#gh-light-mode-only">
+	</td>
 	<td>
 		 <img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/github_stats.svg#gh-dark-mode-only"/>
 		 <img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/github_stats.svg#gh-light-mode-only"/>
-             </td>
-	<td>
-		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg#gh-dark-mode-only">
-                <img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg#gh-light-mode-only">
 	</td>
 </table>
+	    
+
+
+
+
+
+
+
+
+
 
 
 
