@@ -10,7 +10,7 @@ svg {
   width: calc(100% - 10px);
   height: calc(100% - 10px);
   fill: none; 
-  stroke: none;
+  stroke: rgb(225, 228, 232);
   stroke-width: 1px;
   rx: 6px;
   ry: 6px;
@@ -18,7 +18,7 @@ svg {
 
 #gh-dark-mode-only:target #background {
   fill: none;
-  stroke: none;
+  stroke: rgb(225, 228, 232);
   stroke-width: 0.5px;
 }
 
@@ -152,7 +152,7 @@ div.ellipsis {
 
 <div>
 <span class="progress">
-<span class="progress-item" style="--final-width: 42.577235043118364%; --color: #f1e05a; --delay: 0s;"></span><span class="progress-item" style="--final-width: 31.886316167142915%; --color: #e34c26; --delay: 0.5s;"></span><span class="progress-item" style="--final-width: 25.536448789738724%; --color: #663399; --delay: 1s;"></span>
+<span class="progress-item" style="--final-width: 42.239290372806906%; --color: #f1e05a; --delay: 0s;"></span><span class="progress-item" style="--final-width: 32.07397363387485%; --color: #e34c26; --delay: 0.5s;"></span><span class="progress-item" style="--final-width: 25.686735993318244%; --color: #663399; --delay: 1s;"></span>
 </span>
 </div>
 
@@ -163,21 +163,21 @@ div.ellipsis {
 viewBox="0 0 16 16" version="1.1" width="16" height="16"><path
 fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"></path></svg>
 <span class="lang">JavaScript</span>
-<span class="percent">42.58%</span>
+<span class="percent">42.24%</span>
 </li>
 <li style="--li-delay: 1.75s;">
 <svg xmlns="http://www.w3.org/2000/svg" class="octicon" style="fill:#e34c26;"
 viewBox="0 0 16 16" version="1.1" width="16" height="16"><path
 fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"></path></svg>
 <span class="lang">HTML</span>
-<span class="percent">31.89%</span>
+<span class="percent">32.07%</span>
 </li>
 <li style="--li-delay: 2.00s;">
 <svg xmlns="http://www.w3.org/2000/svg" class="octicon" style="fill:#663399;"
 viewBox="0 0 16 16" version="1.1" width="16" height="16"><path
 fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"></path></svg>
 <span class="lang">CSS</span>
-<span class="percent">25.54%</span>
+<span class="percent">25.69%</span>
 </li>
 </ul>
 
