@@ -309,10 +309,11 @@ fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"></path></svg>
 
   return svgContent;
 }
+
 async function createLanguageStatisticsSVG() {
   try {
     const languageStats = await fetchTopLanguages();
-    const svg = generateSVG(languageStats);
+    const svg = generateSVG(languageStats, colors); 
 
     const dir = "svg";
 
