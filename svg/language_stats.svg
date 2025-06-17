@@ -10,7 +10,7 @@ svg {
   width: calc(100% - 10px);
   height: calc(100% - 10px);
   fill: none; 
-  stroke: rgb(225, 228, 232);
+  stroke: none;
   stroke-width: 1px;
   rx: 6px;
   ry: 6px;
@@ -18,7 +18,7 @@ svg {
 
 #gh-dark-mode-only:target #background {
   fill: none;
-  stroke: rgb(225, 228, 232);
+  stroke: none;
   stroke-width: 0.5px;
 }
 
@@ -152,7 +152,7 @@ div.ellipsis {
 
 <div>
 <span class="progress">
-<span class="progress-item" style="--final-width: 42.649546835527275%; --color: #f1e05a; --delay: 0s;"></span><span class="progress-item" style="--final-width: 31.84616211539889%; --color: #e34c26; --delay: 0.3s;"></span><span class="progress-item" style="--final-width: 25.504291049073835%; --color: #663399; --delay: 0.6s;"></span>
+<span class="progress-item" style="--final-width: 42.64749170043232%; --color: #f1e05a; --delay: 0s;"></span><span class="progress-item" style="--final-width: 31.847303312404172%; --color: #e34c26; --delay: 0.3s;"></span><span class="progress-item" style="--final-width: 25.505204987163506%; --color: #663399; --delay: 0.6s;"></span>
 </span>
 </div>
 
@@ -177,7 +177,7 @@ fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"></path></svg>
 viewBox="0 0 16 16" version="1.1" width="16" height="16"><path
 fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"></path></svg>
 <span class="lang">CSS</span>
-<span class="percent">25.50%</span>
+<span class="percent">25.51%</span>
 </li>
 </ul>
 
