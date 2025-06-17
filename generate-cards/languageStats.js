@@ -17,7 +17,7 @@ const GRAPHQL_API = "https://api.github.com/graphql";
 // Colors for light and dark themes (Цвета для светлой и темной тем)
 const colors = {
   light: {
-    outline: "none", // Outline color (Цвет обводки)
+    outline: "rgb(225, 228, 232)", // Outline color (Цвет обводки)
     background: "none", // Background color (Цвет фона)
     title: "#006AFF", // Header color (Цвет заголовка)
     lang: "#000000", // Language text color (Цвет текста языка)
@@ -26,7 +26,7 @@ const colors = {
     progressItemOutline: "rgb(225, 228, 232)", // Progress bar element outline color (Цвет обводки элементов прогресс-бара)
   },
   dark: {
-    outline: "none",
+    outline: "rgb(225, 228, 232)",
     background: "none",
     title: "#006AFF",
     lang: "#c9d1d9",
@@ -306,198 +306,6 @@ fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"></path></svg>
 </g>
 </g>
 </svg>`;
-
-
-
-// function generateSVG(languageStats, colors) {
-//   const svgWidth = 360;
-//   const svgHeight = 210;
-
-//   let svgContent = `<svg id="gh-dark-mode-only" width="${svgWidth}" height="${svgHeight}" xmlns="http://www.w3.org/2000/svg">
-// <style>
-// svg {
-//   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
-//   font-size: 14px;
-//   line-height: 21px;
-// }
-
-// #background {
-//   width: calc(100% - 10px);
-//   height: calc(100% - 10px);
-//   fill: ${colors.light.background}; 
-//   stroke: ${colors.light.outline};
-//   stroke-width: 1px;
-//   rx: 6px;
-//   ry: 6px;
-// }
-
-// #gh-dark-mode-only:target #background {
-//   fill: ${colors.dark.background};
-//   stroke: ${colors.dark.outline};
-//   stroke-width: 0.5px;
-// }
-
-// foreignObject {
-//   width: calc(100% - 10px - 32px);
-//   height: calc(100% - 10px - 24px);
-// }
-
-// h2 {
-//   margin-top: 0;
-//   margin-bottom: 0.75em;
-//   line-height: 24px;
-//   font-size: 16px;
-//   font-weight: 600;
-//   color: ${colors.light.title}; /* Цвет заголовка */
-// }
-
-// #gh-dark-mode-only:target h2 {
-//   color: ${colors.dark.title}; /* Цвет заголовка для темной темы */
-// }
-
-// ul {
-//   list-style: none;
-//   padding-left: 0;
-//   margin-top: 0;
-//   margin-bottom: 0;
-// }
-
-// @keyframes progressGrow {
-//   from { width: 0; }
-//   to { width: var(--final-width); }
-// }
-
-// .progress {
-//   display: flex;
-//   height: 8px;
-//   overflow: hidden;
-//   background-color: ${colors.light.progressBackground}; 
-//   border-radius: 6px;
-//   outline: 1px solid transparent;
-//   margin-bottom: 1em;
-// }
-
-// #gh-dark-mode-only:target .progress {
-//   background-color: ${colors.dark.progressBackground}; 
-// }
-
-// .progress-item {
-//   width: 0;
-//   outline: 2px solid ${colors.light.progressItemOutline};
-//   border-collapse: collapse;
-//   animation: progressGrow 1.1s cubic-bezier(.33,1.53,.53,1.01) forwards;
-//   animation-delay: var(--delay);
-//   background-color: var(--color);
-// }
-
-// #gh-dark-mode-only:target .progress-item {
-//   outline: 2px solid ${colors.dark.progressItemOutline};
-// }
-
-// @keyframes fadeInScale {
-//   to {
-//     opacity: 1;
-//     transform: scale(1);
-//   }
-// }
-
-// li {
-//   display: inline-flex;
-//   font-size: 12px;
-//   margin-right: 2ch;
-//   align-items: center;
-//   flex-wrap: nowrap;
-//   opacity: 0;
-//   transform: scale(0.9);
-//   animation: fadeInScale 0.45s cubic-bezier(.33,1.53,.53,1.01) forwards;
-//   animation-delay: var(--li-delay);
-// }
-
-// @keyframes bounceIn {
-//   0% { transform: translateY(18px) scale(0.7);}
-//   60% { transform: translateY(-7px) scale(1.08);}
-//   80% { transform: translateY(2px) scale(0.96);}
-//   100% { transform: translateY(0) scale(1);}
-// }
-
-// .octicon {
-//   fill: ${colors.light.percent};
-//   margin-right: 0.5ch;
-//   vertical-align: top;
-//   animation: bounceIn 0.7s cubic-bezier(.33,1.53,.53,1.01) both;
-//   animation-delay: var(--li-delay);
-// }
-
-// #gh-dark-mode-only:target .octicon {
-//   fill: ${colors.dark.percent};
-// }
-
-// .lang {
-//   font-weight: 600;
-//   margin-right: 4px;
-//   color: ${colors.light.lang}; 
-// }
-
-// #gh-dark-mode-only:target .lang {
-//   color: ${colors.dark.lang}; 
-// }
-
-// .percent {
-//   color: ${colors.light.percent};
-// }
-
-// #gh-dark-mode-only:target .percent {
-//   color: ${colors.dark.percent};
-// }
-
-// div.ellipsis {
-//   height: 100%;
-//   overflow: hidden;
-//   text-overflow: ellipsis;
-// }
-// </style>
-
-// <g>
-// <rect x="5" y="5" id="background" />
-// <g>
-// <foreignObject x="21" y="17" width="318" height="176">
-// <div xmlns="http://www.w3.org/1999/xhtml" class="ellipsis">
-
-// <h2>Languages Used (By File Size)</h2>
-
-// <div>
-// <span class="progress">
-// ${languageStats
-//   .map(
-//     ({ lang, percent, color }, i) =>
-//       `<span class="progress-item" style="--final-width: ${percent}%; --color: ${color || "#cccccc"}; --delay: ${i * 0.3}s;"></span>`
-//   )
-//   .join("")}
-// </span>
-// </div>
-
-// <ul>
-// ${languageStats
-//   .map(
-//     ({ lang, percent, color }, index) => `
-// <li style="--li-delay: ${(1.1 + index * 0.15).toFixed(2)}s;">
-// <svg xmlns="http://www.w3.org/2000/svg" class="octicon" style="fill:${
-//       color || "#cccccc"
-//     };"
-// viewBox="0 0 16 16" version="1.1" width="16" height="16"><path
-// fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"></path></svg>
-// <span class="lang">${lang}</span>
-// <span class="percent">${Number(percent).toFixed(2)}%</span>
-// </li>`
-//   )
-//   .join("")}
-// </ul>
-
-// </div>
-// </foreignObject>
-// </g>
-// </g>
-// </svg>`;
 
   return svgContent;
 }
