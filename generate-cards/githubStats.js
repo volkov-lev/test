@@ -280,7 +280,7 @@ tr {
 <g>
 <rect x="5" y="5" id="background" />
 <g>
-<foreignObject x="21" y="15" width="343" height="138" width="375" height="170">
+<foreignObject x="21" y="15" width="343" height="138">
 <div xmlns="http://www.w3.org/1999/xhtml">
 
 <table>
