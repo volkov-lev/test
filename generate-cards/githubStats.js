@@ -182,7 +182,7 @@ function generateSVG(stats) {
 svg {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: 14px;
-  line-height: 11px;
+  line-height: 21px;
 }
 
 #background {
@@ -198,12 +198,12 @@ svg {
 #gh-dark-mode-only:target #background {
   fill: ${colors.dark.background};
   stroke: ${colors.dark.stroke};
-  stroke-width: 1px;
+  stroke-width: 0.5px;
 }
 
 foreignObject {
-  width: calc(100% - 10px - 8px);
-  height: calc(100% - 10px - 8px);
+  width: calc(100% - 10px - 32px);
+  height: calc(100% - 10px - 32px);
 }
 
 table {
@@ -213,10 +213,10 @@ table {
 }
 
 th {
-  padding: 0.2em 0.3em;
+  padding: 0.3em;
   padding-top: 0;
   text-align: left;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   color: ${colors.light.title};
 }
@@ -226,10 +226,10 @@ th {
 }
 
 td {
-  margin-bottom: 6px; 
-  margin-top: 3px;    
-  padding: 0.15em 0.3em; 
-  font-size: 12px;           
+  margin-bottom: 16px; 
+  margin-top: 8px;    
+  padding: 0.05em; 
+  font-size: 11px;           
   line-height: 18px;        
   color: ${colors.light.textPrimary};
 }
@@ -245,10 +245,10 @@ tr {
 
 .octicon {
   fill: ${colors.light.icon};
-  margin-right: 0.7ch;
-  vertical-align: -3px;
-  width: 14px;
-  height: 14px;
+  margin-right: 1ch;
+  vertical-align: top;
+  width: 15px;
+  height: 15px;
 }
 
 #gh-dark-mode-only:target .octicon {
@@ -262,9 +262,9 @@ tr {
 }
 </style>
 <g>
-<rect x="5" y="5" id="background" width="375" height="170"/>
+<rect x="5" y="5" id="background"/>
 <g>
-<foreignObject x="0" y="11" width="367" height="158">
+<foreignObject x="15" y="15" width="343" height="138">
 <div xmlns="http://www.w3.org/1999/xhtml">
 
 <table>
