@@ -117,7 +117,7 @@ async function fetchTopLanguages() {
   return filteredLanguages;
 }
 
-function generateSVG(languageStats) {
+function generateSVG(languageStats, colors) {
   const svgWidth = 360;
   const svgHeight = 210;
 
@@ -179,19 +179,19 @@ ul {
   display: flex;
   height: 8px;
   overflow: hidden;
-  background-color: #e1e4e8; 
+  background-color: ${colors.light.progressBackground}; 
   border-radius: 6px;
   outline: 1px solid transparent;
   margin-bottom: 1em;
 }
 
 #gh-dark-mode-only:target .progress {
-  background-color: rgba(110, 118, 129, 0.4); 
+  background-color: ${colors.dark.progressBackground}; 
 }
 
 .progress-item {
   width: 0;
-  outline: 2px solid rgb(225, 228, 232);
+  outline: 2px solid ${colors.light.progressItemOutline};
   border-collapse: collapse;
   animation: progressGrow 1.1s cubic-bezier(.33,1.53,.53,1.01) forwards;
   animation-delay: var(--delay);
@@ -199,7 +199,7 @@ ul {
 }
 
 #gh-dark-mode-only:target .progress-item {
-  outline: 2px solid #393f47;
+  outline: 2px solid ${colors.dark.progressItemOutline};
 }
 
 @keyframes fadeInScale {
@@ -258,14 +258,13 @@ li {
   color: ${colors.dark.percent};
 }
 
-
 div.ellipsis {
   height: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
 </style>
+
 <g>
 <rect x="5" y="5" id="background" />
 <g>
@@ -278,10 +277,8 @@ div.ellipsis {
 <span class="progress">
 ${languageStats
   .map(
-    ({ lang, percent, color }) =>
-      `<span style="background-color: ${
-        color || "#cccccc"
-      }; width: ${percent}%;" class="progress-item"></span>`
+    ({ lang, percent, color }, i) =>
+      `<span class="progress-item" style="--final-width: ${percent}%; --color: ${color || "#cccccc"}; --delay: ${i * 0.3}s;"></span>`
   )
   .join("")}
 </span>
@@ -291,14 +288,14 @@ ${languageStats
 ${languageStats
   .map(
     ({ lang, percent, color }, index) => `
-<li style="animation-delay: ${index * 150}ms;">
+<li style="--li-delay: ${(1.1 + index * 0.15).toFixed(2)}s;">
 <svg xmlns="http://www.w3.org/2000/svg" class="octicon" style="fill:${
       color || "#cccccc"
     };"
 viewBox="0 0 16 16" version="1.1" width="16" height="16"><path
 fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"></path></svg>
 <span class="lang">${lang}</span>
-<span class="percent">${percent.toFixed(2)}%</span>
+<span class="percent">${Number(percent).toFixed(2)}%</span>
 </li>`
   )
   .join("")}
@@ -312,7 +309,6 @@ fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"></path></svg>
 
   return svgContent;
 }
-
 async function createLanguageStatisticsSVG() {
   try {
     const languageStats = await fetchTopLanguages();
