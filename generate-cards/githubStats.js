@@ -264,7 +264,7 @@ tr {
 <g>
 <rect x="5" y="5" id="background" width="375" height="170"/>
 <g>
-<foreignObject x="9" y="11" width="367" height="158">
+<foreignObject x="0" y="11" width="367" height="158">
 <div xmlns="http://www.w3.org/1999/xhtml">
 
 <table>
