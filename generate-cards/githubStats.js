@@ -181,8 +181,8 @@ function generateSVG(stats) {
 <style>
 svg {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 #background {
@@ -209,15 +209,15 @@ foreignObject {
 table {
   width: 100%;
   border-collapse: collapse;
-  table-layout: fixed;
+  table-layout: auto;
 }
 
 th {
-  padding: 0.25em;
+  padding: 0.2em 0.3em;
   padding-top: 0;
   text-align: left;
-  font-size: 15px;
-  font-weight: bold;
+  font-size: 14px;
+  font-weight: 600;
   color: ${colors.light.title};
 }
 
@@ -226,28 +226,12 @@ th {
 }
 
 td {
-  padding: 0.13em;
-  font-size: 12px;
-  line-height: 16px;
+  margin-bottom: 6px; 
+  margin-top: 3px;    
+  padding: 0.15em 0.3em; 
+  font-size: 12px;           
+  line-height: 18px;        
   color: ${colors.light.textPrimary};
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-td:first-child {
-  width: 70%;
-  min-width: 60px;
-  text-align: left;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-td:last-child {
-  text-align: right;
-  width: 30%;
-  min-width: 35px;
-  white-space: nowrap;
-  overflow: hidden;
 }
 
 #gh-dark-mode-only:target td {
@@ -261,8 +245,8 @@ tr {
 
 .octicon {
   fill: ${colors.light.icon};
-  margin-right: 0.5ch;
-  vertical-align: middle;
+  margin-right: 0.7ch;
+  vertical-align: -3px;
   width: 14px;
   height: 14px;
 }
@@ -278,9 +262,9 @@ tr {
 }
 </style>
 <g>
-<rect x="5" y="5" id="background" />
+<rect x="5" y="5" id="background" width="375" height="170"/>
 <g>
-<foreignObject x="21" y="15" width="367" height="158">
+<foreignObject x="9" y="11" width="367" height="158">
 <div xmlns="http://www.w3.org/1999/xhtml">
 
 <table>
