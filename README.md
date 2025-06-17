@@ -1,16 +1,18 @@
 
 
-<table border="0" align="center">
+<table border="0" align="left">
 	<td>
 		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/streak_stats.svg#gh-dark-mode-only"/>
 		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/streak_stats.svg#gh-light-mode-only"/>
 	</td>
+</table>
+
+<table border="0" align="right">
 	<td>
                 <img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/traffic_stats.svg#gh-dark-mode-only"/>
 		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/traffic_stats.svg#gh-light-mode-only"/>
 	</td>
 </table>
-
 
 <p align="center">
 	<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg#gh-dark-mode-only">
