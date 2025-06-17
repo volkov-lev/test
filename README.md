@@ -1,4 +1,4 @@
-<table border="1" align="center">
+<table border="0" align="center">
 	<td>
 		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/streak_stats.svg#gh-dark-mode-only"/>
 		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/streak_stats.svg#gh-light-mode-only"/>
@@ -9,12 +9,12 @@
 	</td>
 </table>
 	    
-<table border="1" align="center">
-	<td>
-		<img width="" src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg#gh-dark-mode-only">
+<table border="0" align="center" >
+	<td width="410">
+		<img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg#gh-dark-mode-only">
                 <img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/language_stats.svg#gh-light-mode-only">
 	</td>
-	<td>
+	<td width="410">
 		 <img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/github_stats.svg#gh-dark-mode-only"/>
 		 <img src="https://raw.githubusercontent.com/volkov-lev/test/main/svg/github_stats.svg#gh-light-mode-only"/>
 	</td>
