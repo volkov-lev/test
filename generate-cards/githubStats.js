@@ -368,8 +368,8 @@ td {
 
 tr {
   opacity: 0;
-  transform: scale(0.9);
-  animation: fadeInScale 1s cubic-bezier(.33,1.53,.53,1.01) forwards;
+  transform: scale(0.98) translateY(24px);
+  animation: fadeInScale 0.8s cubic-bezier(.33,1.53,.53,1.01) forwards;
 }
 
 tr:nth-child(1) { animation-delay: 1.50s; }
@@ -392,6 +392,11 @@ tr:nth-child(7) { animation-delay: 3.00s; }
   margin-right: 1ch;
   vertical-align: top;
 }
+
+#gh-dark-mode-only:target .octicon {
+  fill: ${colors.dark.icon};
+}
+
 </style>
 <g>
 <rect x="5" y="5" id="background" />
