@@ -251,21 +251,21 @@ tr {
 // tr:nth-child(6) { animation-delay: 0.87s; }
 // tr:nth-child(7) { animation-delay: 1.02s; }
 
-// tr:nth-child(1) { animation-delay: 1.50s; }
-// tr:nth-child(2) { animation-delay: 1.70s; }
-// tr:nth-child(3) { animation-delay: 1.90s; }
-// tr:nth-child(4) { animation-delay: 2.10s; }
-// tr:nth-child(5) { animation-delay: 2.30s; }
-// tr:nth-child(6) { animation-delay: 2.50s; }
-// tr:nth-child(7) { animation-delay: 2.70s; }
-
 tr:nth-child(1) { animation-delay: 1.50s; }
-tr:nth-child(2) { animation-delay: 1.75s; }
-tr:nth-child(3) { animation-delay: 2.00s; }
-tr:nth-child(4) { animation-delay: 2.25s; }
-tr:nth-child(5) { animation-delay: 2.50s; }
-tr:nth-child(6) { animation-delay: 2.75s; }
-tr:nth-child(7) { animation-delay: 3.00s; }
+tr:nth-child(2) { animation-delay: 1.70s; }
+tr:nth-child(3) { animation-delay: 1.90s; }
+tr:nth-child(4) { animation-delay: 2.10s; }
+tr:nth-child(5) { animation-delay: 2.30s; }
+tr:nth-child(6) { animation-delay: 2.50s; }
+tr:nth-child(7) { animation-delay: 2.70s; }
+
+// tr:nth-child(1) { animation-delay: 1.50s; }
+// tr:nth-child(2) { animation-delay: 1.75s; }
+// tr:nth-child(3) { animation-delay: 2.00s; }
+// tr:nth-child(4) { animation-delay: 2.25s; }
+// tr:nth-child(5) { animation-delay: 2.50s; }
+// tr:nth-child(6) { animation-delay: 2.75s; }
+// tr:nth-child(7) { animation-delay: 3.00s; }
 
 @keyframes fadeInScale {
   to {
