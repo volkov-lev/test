@@ -366,14 +366,6 @@ td {
   color: ${colors.dark.textPrimary};
 }
 
-/* Плавная анимация, как в languageStats.js */
-@keyframes fadeInScale {
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
 tr {
   opacity: 0;
   transform: scale(0.9);
@@ -388,24 +380,17 @@ tr:nth-child(5) { animation-delay: 2.50s; }
 tr:nth-child(6) { animation-delay: 2.75s; }
 tr:nth-child(7) { animation-delay: 3.00s; }
 
+@keyframes fadeInScale {
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
 .octicon {
   fill: ${colors.light.icon};
   margin-right: 1ch;
   vertical-align: top;
-  /* bounceIn для иконок, как в languageStats.js */
-  animation: bounceIn 1.2s cubic-bezier(.33,1.53,.53,1.01) both;
-  animation-delay: inherit;
-}
-
-#gh-dark-mode-only:target .octicon {
-  fill: ${colors.dark.icon};
-}
-
-@keyframes bounceIn {
-  0% { transform: translateY(18px) scale(0.7);}
-  60% { transform: translateY(-7px) scale(1.08);}
-  80% { transform: translateY(2px) scale(0.96);}
-  100% { transform: translateY(0) scale(1);}
 }
 </style>
 <g>
