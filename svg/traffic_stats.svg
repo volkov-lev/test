@@ -7,7 +7,7 @@
 
     #background {
       fill: none;
-      stroke: none;
+      stroke: rgb(225, 228, 232);
       stroke-width: 1.7px;
       rx: 6px;
       ry: 6px;
@@ -15,18 +15,18 @@
 
     #gh-dark-mode-only:target #background {
       fill: none;
-      stroke: none;
+      stroke: rgb(225, 228, 232);
     }
 
     .header-outline {
       fill: none;
-      stroke: none; 
+      stroke: rgb(225, 228, 232); 
       stroke-width: 0.7px;
       rx: 5px;
       ry: 5px;
     }
     #gh-dark-mode-only:target .header-outline {
-      stroke: none;
+      stroke: rgb(225, 228, 232);
     }
 
     .title-cards {
@@ -139,7 +139,7 @@
     <rect class="header-outline" x="147" y="41" width="116" height="136" />
     <rect class="header-outline" x="266" y="41" width="116" height="136" />
     
-    <foreignObject x="16" y="45" width="353" height="27">
+    <foreignObject x="0" y="65" width="380" height="110">
       <table xmlns="http://www.w3.org/1999/xhtml" style="width: 100%; border-collapse: collapse;">
         <thead>
           <tr>
