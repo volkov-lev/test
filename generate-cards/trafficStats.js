@@ -14,7 +14,7 @@ if (!token) {
 const colors = {
   light: {
     background: "none", // Background color (Фоновый цвет)
-    stroke: "none", // Outline color (Цвет обводки)
+    stroke: "rgb(225, 228, 232)", // Outline color (Цвет обводки)
     iconGithub: "rgb(88, 96, 105)", // GitHub Icon Color (Цвет иконки GitHub)
     titleCards: "#006AFF", // Header Text Color (Цвет текста заголовка)
     textTitle: "#FFFFFF", // Color of statistics column headers (Цвет заголовков столбцов статистики)
@@ -27,7 +27,7 @@ const colors = {
   },
   dark: {
     background: "none",
-    stroke: "none",
+    stroke: "rgb(225, 228, 232)",
     iconGithub: "#8b949e",
     titleCards: "#006AFF",
     textTitle: "#000000",
@@ -304,7 +304,7 @@ function generateSVG(repoStats) {
     <rect class="header-outline" x="147" y="41" width="116" height="136" />
     <rect class="header-outline" x="266" y="41" width="116" height="136" />
     
-    <foreignObject x="16" y="45" width="353" height="27">
+    <foreignObject x="0" y="65" width="380" height="110">
       <table xmlns="http://www.w3.org/1999/xhtml" style="width: 100%; border-collapse: collapse;">
         <thead>
           <tr>
