@@ -304,13 +304,13 @@ function generateSVG(repoStats) {
     <rect class="header-outline" x="147" y="41" width="116" height="136" />
     <rect class="header-outline" x="266" y="41" width="116" height="136" />
     
-    <foreignObject x="0" y="65" width="380" height="110">
+    <foreignObject x="0" y="45" width="380" height="110">
       <table xmlns="http://www.w3.org/1999/xhtml" style="width: 100%; border-collapse: collapse;">
         <thead>
           <tr>
             <th style="width: ${repoColumnWidth}px; text-align: left; padding-left: 35px;">Repository</th>
-            <th style="width: ${uniquesColumnWidth}px; text-align: center; padding-right: 30px;">Uniques</th>
-            <th style="width: ${dateColumnWidth}px; text-align: center;">Date Range</th>
+            <th style="width: ${uniquesColumnWidth}px; text-align: center; padding-right: 28px;">Uniques</th>
+            <th style="width: ${dateColumnWidth}px; text-align: center; padding-right: 28px;">Date Range</th>
           </tr>
         </thead>
         <tbody>
