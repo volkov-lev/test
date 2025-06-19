@@ -152,7 +152,7 @@ div.ellipsis {
 
 <div>
 <span class="progress">
-<span class="progress-item" style="--final-width: 42.69882593029233%; --color: #f1e05a; --delay: 0s;"></span><span class="progress-item" style="--final-width: 31.818797901967354%; --color: #e34c26; --delay: 0.5s;"></span><span class="progress-item" style="--final-width: 25.482376167740316%; --color: #663399; --delay: 1s;"></span>
+<span class="progress-item" style="--final-width: 42.7008041243177%; --color: #f1e05a; --delay: 0s;"></span><span class="progress-item" style="--final-width: 31.817699429607476%; --color: #e34c26; --delay: 0.5s;"></span><span class="progress-item" style="--final-width: 25.481496446074825%; --color: #663399; --delay: 1s;"></span>
 </span>
 </div>
 

@@ -50,6 +50,7 @@
     th {
       font-size: 11.5px;
       font-weight: 600;
+      letter-spacing: 1px;
       color: #FFFFFF;
       text-shadow: 
         0.5px 0.5px 0px rgb(88, 96, 105), 
