@@ -136,7 +136,7 @@
   </style>
   <g>
     <!-- Общий фон -->
-    <rect id="background" x="5" y="5" width="350" height="200" />
+    <rect id="background" x="5" y="5" width="450" height="200" />
     
     <!-- Заголовок -->
     <rect class="header-outline" x="15" y="15" width="330" height="36" />
