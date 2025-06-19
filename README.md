@@ -1,6 +1,6 @@
 <p align="center">
 
-<img src="https://github.com/volkov-lev/test/blob/main/test.svg#gh-light-mode-only">
+<img src="https://github.com/volkov-lev/test/blob/main/tests.svg#gh-light-mode-only">
 <img src="https://github.com/volkov-lev/test/blob/main/svg/github_stats.svg#gh-light-mode-only"/>
 </p>
 
