@@ -215,6 +215,7 @@ function generateSVG(repoStats) {
     th {
       font-size: 11.5px;
       font-weight: 600;
+      letter-spacing: 1px;
       color: ${colors.light.textTitle};
       text-shadow: 
         0.5px 0.5px 0px ${colors.light.borderColor}, 
