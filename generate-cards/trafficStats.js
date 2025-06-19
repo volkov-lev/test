@@ -310,7 +310,7 @@ function generateSVG(repoStats) {
       <table xmlns="http://www.w3.org/1999/xhtml" style="width: 100%; border-collapse: collapse;">
         <thead>
           <tr>
-            <th style="width: ${repoColumnWidth}px; text-align: left; padding-left: 33px;">Repository</th>
+            <th style="width: ${repoColumnWidth}px; text-align: center;">Repository</th>
             <th style="width: ${uniquesColumnWidth}px; text-align: center; padding-right: 28px;">Uniques</th>
             <th style="width: ${dateColumnWidth}px; text-align: center; padding-right: 8px;">Date Range</th>
           </tr>
