@@ -29,13 +29,13 @@
     }
     #gh-dark-mode-only:target #background {
       fill: rgb(225, 228, 232, 0.5);
-      stroke: rgb(225, 228, 232, 0.5);
+<!--       stroke: rgb(225, 228, 232, 0.5); -->
     }
     
-     #hole-mask rect { 
+<!--      #hole-mask rect { 
       rx: 0px;
       ry: 0px;
-    }
+    } -->
     
    
     .header-outline {
@@ -46,7 +46,7 @@
       ry: 6px;  
     }
     #gh-dark-mode-only:target .header-outline {
-      stroke: rgb(225, 228, 232, 0.5);
+<!--       stroke: rgb(225, 228, 232, 0.5); -->
     }
     
     .title-cards {
