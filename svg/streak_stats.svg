@@ -89,7 +89,7 @@ svg {
     Total Contributions
   </text>
   <text class="date" y="70" text-anchor="middle" style="opacity: 0; animation: fadein 0.7s linear forwards 1.0s">
-    Sep 24, 2023 - Jun 20, 2025
+    Sep 24, 2023 - Jun 21, 2025
   </text>
 </g>
 
@@ -113,13 +113,13 @@ svg {
          
   <text class="stat" y="8" text-anchor="middle" 
         style="opacity: 0; animation: currstreak 0.9s cubic-bezier(.33,1.53,.53,1.01) forwards 0.1s">
-    7
+    0
   </text>
   <text class="label" y="60" text-anchor="middle" style="opacity: 0; animation: fadein 0.7s linear forwards 1.1s">
     Current Streak
   </text>
   <text class="date" y="85" text-anchor="middle" style="opacity: 0; animation: fadein 0.7s linear forwards 1.2s">
-    Jun 14, 2025 - Jun 20, 2025
+    N/A
   </text>
   <!-- Fire icon -->
   <g transform="translate(0, -52)" stroke-opacity="0"
@@ -155,7 +155,7 @@ svg {
 <!-- Footer -->
 <g transform="translate(192, 166)">
   <text class="footer" x="0" y="4" text-anchor="middle" style="opacity: 0; animation: fadein 0.7s linear forwards 1.6s">
-    Updated last at: Jun 21 2025, 02:12
+    Updated last at: Jun 21 2025, 03:59
   </text>
 </g>
 </svg>
